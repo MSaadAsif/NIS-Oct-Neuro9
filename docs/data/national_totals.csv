@@ -1,0 +1,11 @@
+"group","n_unweighted","weighted_pooled_6yr","weighted_pooled_se","annual_average"
+"Total TBI + AUD hospitalizations","49914",249570,3242,41595
+"No AWS hospitalizations","38260",191300,2662,31883
+"AWS hospitalizations","11654",58270,841,9712
+"In-hospital deaths (overall)","2494",12470,303,2078
+"In-hospital deaths (No AWS)","2028",10140,268,1690
+"In-hospital deaths (AWS)","466",2330,117,388
+"Invasive mechanical ventilation","11496",57480,999,9580
+"Pneumonia or aspiration pneumonitis","5097",25485,487,4247
+"Institutional discharge (among survivors)","13772",68860,1045,11477
+"Left against medical advice (among survivors)","2135",10675,276,1779
