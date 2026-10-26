@@ -3,12 +3,12 @@ Age (per 10 years),No AWS,0,0.00%
 Age (per 10 years),AWS,0,0.00%
 Sex,No AWS,90,0.05%
 Sex,AWS,≤10,≤10
-Race/ethnicity,No AWS,0,0.00%
-Race/ethnicity,AWS,0,0.00%
-Primary expected payer,No AWS,0,0.00%
-Primary expected payer,AWS,0,0.00%
-Median household income quartile for patient ZIP code,No AWS,0,0.00%
-Median household income quartile for patient ZIP code,AWS,0,0.00%
+Race/ethnicity,No AWS,"7,560",3.95%
+Race/ethnicity,AWS,"1,940",3.34%
+Primary expected payer,No AWS,630,0.33%
+Primary expected payer,AWS,140,0.25%
+Median household income quartile for patient ZIP code,No AWS,"7,010",3.66%
+Median household income quartile for patient ZIP code,AWS,"3,000",5.16%
 Discharge year,No AWS,0,0.00%
 Discharge year,AWS,0,0.00%
 Hospital census region,No AWS,0,0.00%
@@ -37,10 +37,10 @@ Invasive mechanical ventilation,No AWS,0,0.00%
 Invasive mechanical ventilation,AWS,0,0.00%
 Pneumonia or aspiration pneumonitis,No AWS,0,0.00%
 Pneumonia or aspiration pneumonitis,AWS,0,0.00%
-Institutional discharge (among survivors),No AWS,"10,160",5.31%
-Institutional discharge (among survivors),AWS,"2,330",4.00%
-Discharge against medical advice (among survivors),No AWS,"10,160",5.31%
-Discharge against medical advice (among survivors),AWS,"2,330",4.00%
+Institutional discharge (among survivors),No AWS,≤10,≤10
+Institutional discharge (among survivors),AWS,0,0.00%
+Discharge against medical advice (among survivors),No AWS,≤10,≤10
+Discharge against medical advice (among survivors),AWS,0,0.00%
 "Length of stay, days",No AWS,≤10,≤10
 "Length of stay, days",AWS,0,0.00%
 Hospital cost (2022 USD),No AWS,"2,320",1.21%

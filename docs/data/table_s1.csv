@@ -63,7 +63,8 @@ Extracranial Injury,S10-S99,"range; Injury outside head (7th char A, B, or C)",2
 Tobacco Use,F17,prefix; Nicotine dependence,2017–2022
 Tobacco Use,Z720,exact; Tobacco use,2017–2022
 Tobacco Use,Z87891,exact; Personal history of nicotine dependence,2017–2022
-TBI subtype hierarchy: diffuse injury or brain compression,"S06.2*, S06.A*",Qualifying S06 code with 7th character A; highest priority,2017–2022
+TBI subtype hierarchy: diffuse injury or brain compression,S06.2*,Qualifying S06 code with 7th character A; highest priority,2017–2022
+TBI subtype hierarchy: diffuse injury or brain compression,S06.A*,Qualifying S06 code with 7th character A; highest priority,2021 Q4–2022
 TBI subtype hierarchy: epidural hemorrhage,S06.4*,Qualifying S06 code with 7th character A; second priority,2017–2022
 TBI subtype hierarchy: subdural hemorrhage,S06.5*,Qualifying S06 code with 7th character A; third priority,2017–2022
 "TBI subtype hierarchy: contusion/focal, SAH, or edema","S06.1*, S06.3*, S06.6*",Qualifying S06 code with 7th character A; fourth priority,2017–2022
