@@ -114,7 +114,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#sensitivity-analyses" id="toc-sensitivity-analyses" class="nav-link" data-scroll-target="#sensitivity-analyses">Sensitivity Analyses</a></li>
   <li><a href="#limitations" id="toc-limitations" class="nav-link" data-scroll-target="#limitations">Limitations</a></li>
   <li><a href="#references-and-data-citation" id="toc-references-and-data-citation" class="nav-link" data-scroll-target="#references-and-data-citation">References and Data Citation</a></li>
-  <li><a href="#appendix.-icd-10-cm-code-list" id="toc-appendix.-icd-10-cm-code-list" class="nav-link" data-scroll-target="#appendix.-icd-10-cm-code-list">Appendix. ICD-10-CM Code List</a></li>
+  <li><a href="#supplementary-material" id="toc-supplementary-material" class="nav-link" data-scroll-target="#supplementary-material">Supplementary Material</a></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="index.docx"><i class="bi bi-file-word"></i>MS Word</a></li></ul></div></nav>
     </div>
@@ -181,17 +181,34 @@ table.table th, table.table td { white-space: normal; overflow-wrap: anywhere; }
 </section>
 <section id="methods" class="level2">
 <h2 class="anchored" data-anchor-id="methods">Methods</h2>
-<section id="data-and-cohort" class="level3">
-<h3 class="anchored" data-anchor-id="data-and-cohort">Data and cohort</h3>
-<p>We analyzed the Healthcare Cost and Utilization Project (HCUP) National Inpatient Sample (NIS) for <strong>2017–2022</strong>. The cohort included adult hospitalizations for acute traumatic brain injury (TBI) with documented alcohol use disorder. Each record represents a hospitalization, not a unique person. Survey weights were used to estimate national patterns.</p>
+<section id="data-source-and-ethics" class="level3">
+<h3 class="anchored" data-anchor-id="data-source-and-ethics">Data source and ethics</h3>
+<p>The Healthcare Cost and Utilization Project (HCUP) National Inpatient Sample (NIS), developed by the Agency for Healthcare Research and Quality (AHRQ), is an all-payer database built from a stratified sample of approximately 20% of discharges from U.S. community hospitals and weighted to national estimates. We analyzed 2017–2022, the ICD-10-CM/PCS era. The unit was a hospitalization, not a person. The data are de-identified and publicly available under the HCUP Data Use Agreement; this secondary analysis did not require institutional review board review or informed consent. Small cells are suppressed under HCUP disclosure rules. This study follows the RECORD (Reporting of studies Conducted using Observational Routinely-collected Data) extension of STROBE.</p>
 </section>
-<section id="exposure-outcomes-and-covariates" class="level3">
-<h3 class="anchored" data-anchor-id="exposure-outcomes-and-covariates">Exposure, outcomes, and covariates</h3>
-<p>The exposure was a diagnosis code for AWS during the hospitalization. Outcomes were in-hospital death, invasive mechanical ventilation, pneumonia or aspiration, discharge to an institution, discharge against medical advice, length of stay (LOS), and hospital cost. Adjusted models accounted for patient demographics, hospital characteristics, injury features, and chronic conditions.</p>
+<section id="study-population" class="level3">
+<h3 class="anchored" data-anchor-id="study-population">Study population</h3>
+<p>We selected hospitalizations in this order: age 18 years or older; acute TBI in any of 40 diagnosis fields, defined by an S06 code with seventh character A and seven characters total; active alcohol use disorder (AUD), defined by F10.1 or F10.2 codes after excluding remission-only F10.11/F10.21; and known in-hospital mortality status (DIED 0 or 1). The unit remained a hospitalization throughout. The cohort selection appears in Figure 1; Table S1 lists the ICD-10-CM/PCS definitions.</p>
+</section>
+<section id="exposure" class="level3">
+<h3 class="anchored" data-anchor-id="exposure">Exposure</h3>
+<p>AWS was defined by any of F10.230, F10.231, F10.232, F10.239, F10.130, F10.131, F10.132, or F10.139 in any diagnosis field. Withdrawal delirium codes (F10.231 and F10.131) were included. F10.13x codes were counted when present; the code audit verifies that they do not appear before October 2020.</p>
+</section>
+<section id="outcomes" class="level3">
+<h3 class="anchored" data-anchor-id="outcomes">Outcomes</h3>
+<p>In-hospital death was DIED. Invasive mechanical ventilation (IMV) was identified with ICD-10-PCS 5A1935Z, 5A1945Z, or 5A1955Z. Pneumonia included diagnosis prefixes J12–J18; aspiration pneumonitis was J69.0, and the combined outcome was either. Institutional discharge was DISPUNIFORM 2 or 5; discharge against medical advice (AMA) was DISPUNIFORM 7. Both disposition outcomes were analyzed among survivors with known disposition (DISPUNIFORM 1, 2, 5, 6, or 7); home health (6) was not institutional. LOS was the recorded length of stay in days. Hospital cost was TOTCHG multiplied by CCR_NIS and adjusted to 2022 U.S. dollars using the CPI-U medical-care index implemented in easyNIS. Cost was unavailable when TOTCHG or CCR_NIS was missing or CCR_NIS was non-positive; zero or negative cost values were excluded from the cost model.</p>
+</section>
+<section id="covariates" class="level3">
+<h3 class="anchored" data-anchor-id="covariates">Covariates</h3>
+<p>The adjustment set was age per 10 years, sex, race/ethnicity (RACE), primary expected payer (PAY1), ZIP-code income quartile (ZIPINC_QRTL), discharge year, hospital census region, bed size, location/teaching status, TBI subtype, skull fracture, extracranial injury, TBI as the principal diagnosis, chronic Elixhauser burden, liver disease, and other substance use disorder (SUD). The mutually exclusive TBI hierarchy assigned the most severe observed qualifying subtype: diffuse injury/brain compression (S06.2 or S06.A), epidural hemorrhage (S06.4), subdural hemorrhage (S06.5), contusion/focal injury/subarachnoid hemorrhage/edema (S06.1, S06.3, or S06.6), then concussion/other/unspecified (S06.0, S06.8, or S06.9). Skull fracture used S02.0, S02.1, or S02.91 with seventh character A or B; extracranial injury used S10–S99 with seventh character A, B, or C. Other SUD used F11–F16, F18, or F19, excluding remission-only codes. Liver disease used K70–K77.</p>
+<p>The chronic comorbidity count was based on AHRQ Elixhauser Refined ICD-10 conditions scored by easyNIS/medicalcoder, grouped as 0, 1, 2, or 3 or more. The 29 conditions retained are listed in protocol/decisions.md; alcohol, liver disease, and other SUD were excluded because they were cohort features or separately adjusted, while acute trauma-related, neurologic, cerebrovascular, psychosis, blood-loss anemia, coagulopathy, fluid/electrolyte, and weight-loss conditions were excluded because NIS has no present-on-admission indicator to distinguish pre-existing illness from acute sequelae. Ventilation, pneumonia, neurosurgery, severity scores, and LOS were not adjustment variables because they may follow AWS or reflect the hospitalization course; the analysis did not measure neurosurgery.</p>
+</section>
+<section id="missing-data" class="level3">
+<h3 class="anchored" data-anchor-id="missing-data">Missing data</h3>
+<p>Adjusted models used complete cases. Table 2 gives each model’s weighted analytic N and percentage of outcome-eligible weighted discharges retained; Table S3 shows weighted missingness by AWS group for each adjustment variable and outcome. Table 1 displays observed missing categories as “Unknown” for payer, income, race, and other categorical variables with missing values; those records are excluded from adjusted models. Continuous age and sex are not recoded as Unknown.</p>
 </section>
 <section id="statistical-analysis" class="level3">
 <h3 class="anchored" data-anchor-id="statistical-analysis">Statistical analysis</h3>
-<p>We compared hospitalizations with and without coded AWS using survey-weighted regression. Binary outcomes are reported as weighted n (%) and analyzed with survey-weighted logistic regression; LOS and cost are summarized as weighted median (IQR) and modeled with survey-weighted log-link generalized linear models (quasipoisson for LOS and gamma for cost), which handle right-skewed data without transforming the outcome and estimate mean differences as predictive margins. Adjusted odds ratios summarize associations for binary outcomes after accounting for the listed covariates; values above 1 indicate higher odds and values below 1 indicate lower odds. Results describe associations and do not establish cause and effect. All counts and percentages are survey-weighted national estimates, reported as weighted n (weighted %). The analysis included 49,914 sampled hospitalizations, representing 249,570 hospitalizations nationally. Cells based on 10 or fewer sampled hospitalizations are suppressed (≤10) per the HCUP data use agreement.</p>
+<p>The NIS survey design used hospital clusters (HOSP_NIS), strata (NIS_STRATUM), and discharge weights (DISCWT); cohort analyses were domain analyses on the full survey design. Lonely primary sampling units were handled with the survey option <code>survey.lonely.psu = "adjust"</code> (and <code>survey.adjust.domain.lonely = TRUE</code>). Table 1 group comparisons used the <code>gtsummary::add_p()</code> survey defaults: Rao–Scott chi-square tests for categorical variables and design-based Wilcoxon rank-sum tests for continuous variables. Binary outcomes used survey-weighted quasibinomial logistic regression and are reported as adjusted odds ratios (ORs) with 95% confidence intervals. The model code also computes standardized probabilities by setting AWS to each level for the complete-case records, averaging predictions with normalized survey weights, and using a delta-method variance with t-based confidence limits from survey design degrees of freedom; Table 2 reports binary ORs and does not display those probability margins. LOS used a quasipoisson log-link model; cost used a Gamma log-link model among positive costs. Continuous outcomes are summarized by median (IQR), with adjusted differences in mean outcomes from predictive margins. Table S4 reports annual weighted prevalence and a survey logistic trend test with year as a continuous term; the vertical marker denotes October 2020, when the additional F10.13x codes became valid. Sensitivity analyses restricted the cohort to LOS ≥2 days to assess short-stay coding opportunity, required TBI as the principal diagnosis to assess diagnosis position, and excluded transferred-in discharges to assess transfer-related case mix. Tests were two-sided with α=0.05 and no multiplicity adjustment. Analyses used R 4.6.1, with the survey, gtsummary, and easyNIS packages. All counts are weighted national estimates and are shown as weighted n (weighted %); cells with unweighted counts ≤10 are suppressed. The analysis included 49,914 sampled hospitalizations, representing 249,570 hospitalizations nationally.</p>
 </section>
 </section>
 <section id="cohort-flow" class="level2">
@@ -211,6 +228,7 @@ Figure&nbsp;1: Cohort flow for adult TBI hospitalizations with alcohol use disor
 </div>
 </div>
 </div>
+<p>Figure 1 summarizes the sequential cohort selection. The weighted number of hospitalizations in the final cohort was <strong>249,570</strong>.</p>
 </section>
 <section id="baseline-characteristics" class="level2">
 <h2 class="anchored" data-anchor-id="baseline-characteristics">Baseline Characteristics</h2>
@@ -705,6 +723,7 @@ Table&nbsp;1: Baseline characteristics of adult TBI hospitalizations by AWS stat
 </div>
 <p><em>Values are survey-weighted national estimates, n (%), unless stated otherwise.</em></p>
 <p><em>Sex was missing for &lt;0.1% of hospitalizations.</em></p>
+<p>Table 1 compares weighted baseline characteristics by AWS status. Compared with hospitalizations without AWS, those with AWS had a higher median age (<strong>56 (46, 64)</strong> vs <strong>52 (36, 63)</strong>), a lower weighted percentage of female discharges (<strong>10,835 (18.6%)</strong> vs <strong>44,425 (23.2%)</strong>), a higher percentage recorded as White (<strong>39,755 (68.2%)</strong> vs <strong>116,220 (60.8%)</strong>), and a higher percentage with Medicaid as payer (<strong>19,835 (34.0%)</strong> vs <strong>52,335 (27.4%)</strong>).</p>
 </section>
 <section id="in-hospital-outcomes" class="level2">
 <h2 class="anchored" data-anchor-id="in-hospital-outcomes">In-Hospital Outcomes</h2>
@@ -717,23 +736,23 @@ Table&nbsp;2: Crude and adjusted in-hospital outcomes by AWS status.
 </figcaption>
 <div aria-describedby="tbl-outcomes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<div id="xiioojvvkf" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#xiioojvvkf table {
+<div id="huprjqdaxf" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#huprjqdaxf table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#xiioojvvkf thead, #xiioojvvkf tbody, #xiioojvvkf tfoot, #xiioojvvkf tr, #xiioojvvkf td, #xiioojvvkf th {
+#huprjqdaxf thead, #huprjqdaxf tbody, #huprjqdaxf tfoot, #huprjqdaxf tr, #huprjqdaxf td, #huprjqdaxf th {
   border-style: none;
 }
 
-#xiioojvvkf p {
+#huprjqdaxf p {
   margin: 0;
   padding: 0;
 }
 
-#xiioojvvkf .gt_table {
+#huprjqdaxf .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -759,12 +778,12 @@ Table&nbsp;2: Crude and adjusted in-hospital outcomes by AWS status.
   border-left-color: #D3D3D3;
 }
 
-#xiioojvvkf .gt_caption {
+#huprjqdaxf .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#xiioojvvkf .gt_title {
+#huprjqdaxf .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -776,7 +795,7 @@ Table&nbsp;2: Crude and adjusted in-hospital outcomes by AWS status.
   border-bottom-width: 0;
 }
 
-#xiioojvvkf .gt_subtitle {
+#huprjqdaxf .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -788,7 +807,7 @@ Table&nbsp;2: Crude and adjusted in-hospital outcomes by AWS status.
   border-top-width: 0;
 }
 
-#xiioojvvkf .gt_heading {
+#huprjqdaxf .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -800,13 +819,13 @@ Table&nbsp;2: Crude and adjusted in-hospital outcomes by AWS status.
   border-right-color: #D3D3D3;
 }
 
-#xiioojvvkf .gt_bottom_border {
+#huprjqdaxf .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#xiioojvvkf .gt_col_headings {
+#huprjqdaxf .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -821,7 +840,7 @@ Table&nbsp;2: Crude and adjusted in-hospital outcomes by AWS status.
   border-right-color: #D3D3D3;
 }
 
-#xiioojvvkf .gt_col_heading {
+#huprjqdaxf .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -841,7 +860,7 @@ Table&nbsp;2: Crude and adjusted in-hospital outcomes by AWS status.
   overflow-x: hidden;
 }
 
-#xiioojvvkf .gt_column_spanner_outer {
+#huprjqdaxf .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -853,15 +872,15 @@ Table&nbsp;2: Crude and adjusted in-hospital outcomes by AWS status.
   padding-right: 4px;
 }
 
-#xiioojvvkf .gt_column_spanner_outer:first-child {
+#huprjqdaxf .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#xiioojvvkf .gt_column_spanner_outer:last-child {
+#huprjqdaxf .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#xiioojvvkf .gt_column_spanner {
+#huprjqdaxf .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -873,11 +892,11 @@ Table&nbsp;2: Crude and adjusted in-hospital outcomes by AWS status.
   width: 100%;
 }
 
-#xiioojvvkf .gt_spanner_row {
+#huprjqdaxf .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#xiioojvvkf .gt_group_heading {
+#huprjqdaxf .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -903,7 +922,7 @@ Table&nbsp;2: Crude and adjusted in-hospital outcomes by AWS status.
   text-align: left;
 }
 
-#xiioojvvkf .gt_empty_group_heading {
+#huprjqdaxf .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -918,15 +937,15 @@ Table&nbsp;2: Crude and adjusted in-hospital outcomes by AWS status.
   vertical-align: middle;
 }
 
-#xiioojvvkf .gt_from_md > :first-child {
+#huprjqdaxf .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#xiioojvvkf .gt_from_md > :last-child {
+#huprjqdaxf .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#xiioojvvkf .gt_row {
+#huprjqdaxf .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -945,7 +964,7 @@ Table&nbsp;2: Crude and adjusted in-hospital outcomes by AWS status.
   overflow-x: hidden;
 }
 
-#xiioojvvkf .gt_stub {
+#huprjqdaxf .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -958,7 +977,7 @@ Table&nbsp;2: Crude and adjusted in-hospital outcomes by AWS status.
   padding-right: 5px;
 }
 
-#xiioojvvkf .gt_stub_row_group {
+#huprjqdaxf .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -972,15 +991,15 @@ Table&nbsp;2: Crude and adjusted in-hospital outcomes by AWS status.
   vertical-align: top;
 }
 
-#xiioojvvkf .gt_row_group_first td {
+#huprjqdaxf .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#xiioojvvkf .gt_row_group_first th {
+#huprjqdaxf .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#xiioojvvkf .gt_summary_row {
+#huprjqdaxf .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -990,16 +1009,16 @@ Table&nbsp;2: Crude and adjusted in-hospital outcomes by AWS status.
   padding-right: 5px;
 }
 
-#xiioojvvkf .gt_first_summary_row {
+#huprjqdaxf .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#xiioojvvkf .gt_first_summary_row.thick {
+#huprjqdaxf .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#xiioojvvkf .gt_last_summary_row {
+#huprjqdaxf .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1009,7 +1028,7 @@ Table&nbsp;2: Crude and adjusted in-hospital outcomes by AWS status.
   border-bottom-color: #D3D3D3;
 }
 
-#xiioojvvkf .gt_grand_summary_row {
+#huprjqdaxf .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1019,7 +1038,7 @@ Table&nbsp;2: Crude and adjusted in-hospital outcomes by AWS status.
   padding-right: 5px;
 }
 
-#xiioojvvkf .gt_first_grand_summary_row {
+#huprjqdaxf .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1029,7 +1048,7 @@ Table&nbsp;2: Crude and adjusted in-hospital outcomes by AWS status.
   border-top-color: #D3D3D3;
 }
 
-#xiioojvvkf .gt_last_grand_summary_row_top {
+#huprjqdaxf .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1039,11 +1058,11 @@ Table&nbsp;2: Crude and adjusted in-hospital outcomes by AWS status.
   border-bottom-color: #D3D3D3;
 }
 
-#xiioojvvkf .gt_striped {
+#huprjqdaxf .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#xiioojvvkf .gt_table_body {
+#huprjqdaxf .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1052,7 +1071,7 @@ Table&nbsp;2: Crude and adjusted in-hospital outcomes by AWS status.
   border-bottom-color: #D3D3D3;
 }
 
-#xiioojvvkf .gt_footnotes {
+#huprjqdaxf .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1066,7 +1085,7 @@ Table&nbsp;2: Crude and adjusted in-hospital outcomes by AWS status.
   border-right-color: #D3D3D3;
 }
 
-#xiioojvvkf .gt_footnote {
+#huprjqdaxf .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1075,7 +1094,7 @@ Table&nbsp;2: Crude and adjusted in-hospital outcomes by AWS status.
   padding-right: 5px;
 }
 
-#xiioojvvkf .gt_sourcenotes {
+#huprjqdaxf .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1089,7 +1108,7 @@ Table&nbsp;2: Crude and adjusted in-hospital outcomes by AWS status.
   border-right-color: #D3D3D3;
 }
 
-#xiioojvvkf .gt_sourcenote {
+#huprjqdaxf .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1097,72 +1116,72 @@ Table&nbsp;2: Crude and adjusted in-hospital outcomes by AWS status.
   padding-right: 5px;
 }
 
-#xiioojvvkf .gt_left {
+#huprjqdaxf .gt_left {
   text-align: left;
 }
 
-#xiioojvvkf .gt_center {
+#huprjqdaxf .gt_center {
   text-align: center;
 }
 
-#xiioojvvkf .gt_right {
+#huprjqdaxf .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#xiioojvvkf .gt_font_normal {
+#huprjqdaxf .gt_font_normal {
   font-weight: normal;
 }
 
-#xiioojvvkf .gt_font_bold {
+#huprjqdaxf .gt_font_bold {
   font-weight: bold;
 }
 
-#xiioojvvkf .gt_font_italic {
+#huprjqdaxf .gt_font_italic {
   font-style: italic;
 }
 
-#xiioojvvkf .gt_super {
+#huprjqdaxf .gt_super {
   font-size: 65%;
 }
 
-#xiioojvvkf .gt_footnote_marks {
+#huprjqdaxf .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#xiioojvvkf .gt_asterisk {
+#huprjqdaxf .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#xiioojvvkf .gt_indent_1 {
+#huprjqdaxf .gt_indent_1 {
   text-indent: 5px;
 }
 
-#xiioojvvkf .gt_indent_2 {
+#huprjqdaxf .gt_indent_2 {
   text-indent: 10px;
 }
 
-#xiioojvvkf .gt_indent_3 {
+#huprjqdaxf .gt_indent_3 {
   text-indent: 15px;
 }
 
-#xiioojvvkf .gt_indent_4 {
+#huprjqdaxf .gt_indent_4 {
   text-indent: 20px;
 }
 
-#xiioojvvkf .gt_indent_5 {
+#huprjqdaxf .gt_indent_5 {
   text-indent: 25px;
 }
 
-#xiioojvvkf .katex-display {
+#huprjqdaxf .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#xiioojvvkf div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#huprjqdaxf div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1173,6 +1192,7 @@ Table&nbsp;2: Crude and adjusted in-hospital outcomes by AWS status.
 <th id="a::stub" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Outcome</th>
 <th id="No-AWS,-N-=-191,300" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">No AWS, N = 191,300</th>
 <th id="AWS,-N-=-58,270" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">AWS, N = 58,270</th>
+<th id="Adjusted-model,-weighted-N-(%-of-eligible)" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Adjusted model, weighted N (% of eligible)</th>
 <th id="Unadjusted-estimate-(95%-CI)" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Unadjusted estimate (95% CI)</th>
 <th id="Adjusted-estimate-(95%-CI)" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Adjusted estimate (95% CI)</th>
 <th id="p-value" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">p-value</th>
@@ -1180,12 +1200,13 @@ Table&nbsp;2: Crude and adjusted in-hospital outcomes by AWS status.
 </thead>
 <tbody class="gt_table_body">
 <tr class="gt_group_heading_row odd">
-<th colspan="6" id="Binary-outcomes:-n-(%);-odds-ratio" class="gt_group_heading" data-quarto-table-cell-role="th" scope="colgroup">Binary outcomes: n (%); odds ratio</th>
+<th colspan="7" id="Binary-outcomes:-n-(%);-odds-ratio" class="gt_group_heading" data-quarto-table-cell-role="th" scope="colgroup">Binary outcomes: n (%); odds ratio</th>
 </tr>
 <tr class="gt_row_group_first even">
 <th id="stub_1_1" class="gt_row gt_left gt_stub" data-quarto-table-cell-role="th" scope="row">In-hospital mortality</th>
 <td class="gt_row gt_left" headers="Binary-outcomes:-n-(%);-odds-ratio stub_1_1 No-AWS,-N-=-191,300">10,140 (5.3%)</td>
 <td class="gt_row gt_left" headers="Binary-outcomes:-n-(%);-odds-ratio stub_1_1 AWS,-N-=-58,270">2,330 (4.0%)</td>
+<td class="gt_row gt_right" headers="Binary-outcomes:-n-(%);-odds-ratio stub_1_1 Adjusted-model,-weighted-N-(%-of-eligible)">229,740 (92.1%)</td>
 <td class="gt_row gt_left" headers="Binary-outcomes:-n-(%);-odds-ratio stub_1_1 Unadjusted-estimate-(95%-CI)">0.74 (0.67–0.83)</td>
 <td class="gt_row gt_left" headers="Binary-outcomes:-n-(%);-odds-ratio stub_1_1 Adjusted-estimate-(95%-CI)">0.60 (0.53–0.67)</td>
 <td class="gt_row gt_left" headers="Binary-outcomes:-n-(%);-odds-ratio stub_1_1 p-value">&lt;0.001</td>
@@ -1194,6 +1215,7 @@ Table&nbsp;2: Crude and adjusted in-hospital outcomes by AWS status.
 <th id="stub_1_2" class="gt_row gt_left gt_stub" data-quarto-table-cell-role="th" scope="row">Invasive mechanical ventilation</th>
 <td class="gt_row gt_left" headers="Binary-outcomes:-n-(%);-odds-ratio stub_1_2 No-AWS,-N-=-191,300">42,330 (22.1%)</td>
 <td class="gt_row gt_left" headers="Binary-outcomes:-n-(%);-odds-ratio stub_1_2 AWS,-N-=-58,270">15,150 (26.0%)</td>
+<td class="gt_row gt_right" headers="Binary-outcomes:-n-(%);-odds-ratio stub_1_2 Adjusted-model,-weighted-N-(%-of-eligible)">229,740 (92.1%)</td>
 <td class="gt_row gt_left" headers="Binary-outcomes:-n-(%);-odds-ratio stub_1_2 Unadjusted-estimate-(95%-CI)">1.24 (1.18–1.30)</td>
 <td class="gt_row gt_left" headers="Binary-outcomes:-n-(%);-odds-ratio stub_1_2 Adjusted-estimate-(95%-CI)">1.42 (1.34–1.50)</td>
 <td class="gt_row gt_left" headers="Binary-outcomes:-n-(%);-odds-ratio stub_1_2 p-value">&lt;0.001</td>
@@ -1202,6 +1224,7 @@ Table&nbsp;2: Crude and adjusted in-hospital outcomes by AWS status.
 <th id="stub_1_3" class="gt_row gt_left gt_stub" data-quarto-table-cell-role="th" scope="row">Pneumonia or aspiration pneumonitis</th>
 <td class="gt_row gt_left" headers="Binary-outcomes:-n-(%);-odds-ratio stub_1_3 No-AWS,-N-=-191,300">15,000 (7.8%)</td>
 <td class="gt_row gt_left" headers="Binary-outcomes:-n-(%);-odds-ratio stub_1_3 AWS,-N-=-58,270">10,480 (18.0%)</td>
+<td class="gt_row gt_right" headers="Binary-outcomes:-n-(%);-odds-ratio stub_1_3 Adjusted-model,-weighted-N-(%-of-eligible)">229,740 (92.1%)</td>
 <td class="gt_row gt_left" headers="Binary-outcomes:-n-(%);-odds-ratio stub_1_3 Unadjusted-estimate-(95%-CI)">2.58 (2.43–2.74)</td>
 <td class="gt_row gt_left" headers="Binary-outcomes:-n-(%);-odds-ratio stub_1_3 Adjusted-estimate-(95%-CI)">2.32 (2.17–2.49)</td>
 <td class="gt_row gt_left" headers="Binary-outcomes:-n-(%);-odds-ratio stub_1_3 p-value">&lt;0.001</td>
@@ -1210,6 +1233,7 @@ Table&nbsp;2: Crude and adjusted in-hospital outcomes by AWS status.
 <th id="stub_1_4" class="gt_row gt_left gt_stub" data-quarto-table-cell-role="th" scope="row">Institutional discharge (among survivors)</th>
 <td class="gt_row gt_left" headers="Binary-outcomes:-n-(%);-odds-ratio stub_1_4 No-AWS,-N-=-191,300">46,550 (25.7%)</td>
 <td class="gt_row gt_left" headers="Binary-outcomes:-n-(%);-odds-ratio stub_1_4 AWS,-N-=-58,270">22,310 (39.9%)</td>
+<td class="gt_row gt_right" headers="Binary-outcomes:-n-(%);-odds-ratio stub_1_4 Adjusted-model,-weighted-N-(%-of-eligible)">218,640 (92.2%)</td>
 <td class="gt_row gt_left" headers="Binary-outcomes:-n-(%);-odds-ratio stub_1_4 Unadjusted-estimate-(95%-CI)">1.92 (1.83–2.01)</td>
 <td class="gt_row gt_left" headers="Binary-outcomes:-n-(%);-odds-ratio stub_1_4 Adjusted-estimate-(95%-CI)">1.74 (1.65–1.84)</td>
 <td class="gt_row gt_left" headers="Binary-outcomes:-n-(%);-odds-ratio stub_1_4 p-value">&lt;0.001</td>
@@ -1218,17 +1242,19 @@ Table&nbsp;2: Crude and adjusted in-hospital outcomes by AWS status.
 <th id="stub_1_5" class="gt_row gt_left gt_stub" data-quarto-table-cell-role="th" scope="row">Discharge against medical advice (among survivors)</th>
 <td class="gt_row gt_left" headers="Binary-outcomes:-n-(%);-odds-ratio stub_1_5 No-AWS,-N-=-191,300">7,530 (4.2%)</td>
 <td class="gt_row gt_left" headers="Binary-outcomes:-n-(%);-odds-ratio stub_1_5 AWS,-N-=-58,270">3,150 (5.6%)</td>
+<td class="gt_row gt_right" headers="Binary-outcomes:-n-(%);-odds-ratio stub_1_5 Adjusted-model,-weighted-N-(%-of-eligible)">218,640 (92.2%)</td>
 <td class="gt_row gt_left" headers="Binary-outcomes:-n-(%);-odds-ratio stub_1_5 Unadjusted-estimate-(95%-CI)">1.38 (1.25–1.52)</td>
 <td class="gt_row gt_left" headers="Binary-outcomes:-n-(%);-odds-ratio stub_1_5 Adjusted-estimate-(95%-CI)">1.49 (1.34–1.66)</td>
 <td class="gt_row gt_left" headers="Binary-outcomes:-n-(%);-odds-ratio stub_1_5 p-value">&lt;0.001</td>
 </tr>
 <tr class="gt_group_heading_row odd">
-<th colspan="6" id="Continuous-outcomes:-median-(IQR);-difference-in-adjusted-means" class="gt_group_heading" data-quarto-table-cell-role="th" scope="colgroup">Continuous outcomes: median (IQR); difference in adjusted means</th>
+<th colspan="7" id="Continuous-outcomes:-median-(IQR);-difference-in-adjusted-means" class="gt_group_heading" data-quarto-table-cell-role="th" scope="colgroup">Continuous outcomes: median (IQR); difference in adjusted means</th>
 </tr>
 <tr class="gt_row_group_first even">
 <th id="stub_1_6" class="gt_row gt_left gt_stub" data-quarto-table-cell-role="th" scope="row">Length of stay</th>
 <td class="gt_row gt_left" headers="Continuous-outcomes:-median-(IQR);-difference-in-adjusted-means stub_1_6 No-AWS,-N-=-191,300">3 (2–7)</td>
 <td class="gt_row gt_left" headers="Continuous-outcomes:-median-(IQR);-difference-in-adjusted-means stub_1_6 AWS,-N-=-58,270">8 (4–15)</td>
+<td class="gt_row gt_right" headers="Continuous-outcomes:-median-(IQR);-difference-in-adjusted-means stub_1_6 Adjusted-model,-weighted-N-(%-of-eligible)">229,740 (92.1%)</td>
 <td class="gt_row gt_left" headers="Continuous-outcomes:-median-(IQR);-difference-in-adjusted-means stub_1_6 Unadjusted-estimate-(95%-CI)">+5.38 days (+5.06 to +5.69)</td>
 <td class="gt_row gt_left" headers="Continuous-outcomes:-median-(IQR);-difference-in-adjusted-means stub_1_6 Adjusted-estimate-(95%-CI)">+4.69 days (+4.38 to +5.00)</td>
 <td class="gt_row gt_left" headers="Continuous-outcomes:-median-(IQR);-difference-in-adjusted-means stub_1_6 p-value">&lt;0.001</td>
@@ -1237,6 +1263,7 @@ Table&nbsp;2: Crude and adjusted in-hospital outcomes by AWS status.
 <th id="stub_1_7" class="gt_row gt_left gt_stub" data-quarto-table-cell-role="th" scope="row">Hospital cost</th>
 <td class="gt_row gt_left" headers="Continuous-outcomes:-median-(IQR);-difference-in-adjusted-means stub_1_7 No-AWS,-N-=-191,300">$16,326 ($9,290–$32,533)</td>
 <td class="gt_row gt_left" headers="Continuous-outcomes:-median-(IQR);-difference-in-adjusted-means stub_1_7 AWS,-N-=-58,270">$25,814 ($13,234–$52,889)</td>
+<td class="gt_row gt_right" headers="Continuous-outcomes:-median-(IQR);-difference-in-adjusted-means stub_1_7 Adjusted-model,-weighted-N-(%-of-eligible)">227,430 (92.2%)</td>
 <td class="gt_row gt_left" headers="Continuous-outcomes:-median-(IQR);-difference-in-adjusted-means stub_1_7 Unadjusted-estimate-(95%-CI)">+$13,090 (+$12,073 to +$14,106)</td>
 <td class="gt_row gt_left" headers="Continuous-outcomes:-median-(IQR);-difference-in-adjusted-means stub_1_7 Adjusted-estimate-(95%-CI)">+$13,543 (+$12,456 to +$14,630)</td>
 <td class="gt_row gt_left" headers="Continuous-outcomes:-median-(IQR);-difference-in-adjusted-means stub_1_7 p-value">&lt;0.001</td>
@@ -1251,6 +1278,7 @@ Table&nbsp;2: Crude and adjusted in-hospital outcomes by AWS status.
 </div>
 </div>
 <p><em>Survey-weighted national estimates. Binary outcomes are shown as weighted n (%) with odds ratios from survey-weighted logistic regression. Length of stay and cost are right-skewed, so they are summarized as median (IQR). Differences are estimated with survey-weighted generalized linear models with a log link (Poisson for length of stay, gamma for cost). These models handle skewed data without transforming the outcome, and the results are reported as differences in adjusted mean values (predictive margins). Adjusted models include all covariates listed in Methods. Costs are inflation-adjusted to 2022 US dollars. Institutional discharge and discharge against medical advice are among survivors.</em></p>
+<p>In the adjusted models, the aOR was <strong>0.60 (0.53–0.67)</strong> for death, <strong>1.42 (1.34–1.50)</strong> for IMV, <strong>2.32 (2.17–2.49)</strong> for pneumonia/aspiration, <strong>1.74 (1.65–1.84)</strong> for institutional discharge, and <strong>1.49 (1.34–1.66)</strong> for AMA. Adjusted mean differences were <strong>+4.69 days (+4.38 to +5.00)</strong> days for LOS and <strong>+$13,543 (+$12,456 to +$14,630)</strong> for cost.</p>
 </section>
 <section id="adjusted-odds-ratios-for-in-hospital-outcomes" class="level2">
 <h2 class="anchored" data-anchor-id="adjusted-odds-ratios-for-in-hospital-outcomes">Adjusted Odds Ratios for In-Hospital Outcomes</h2>
@@ -1287,10 +1315,11 @@ Figure&nbsp;3: Annual prevalence of coded AWS among eligible hospitalizations.
 </div>
 </div>
 </div>
+<p>The weighted prevalence increased from <strong>20.7%</strong> in 2017 to <strong>25.4%</strong> in 2022. The annual estimates and confidence intervals are listed in Table S4; the linear survey-logistic trend test gave p-for-trend <strong>&lt;0.001</strong>.</p>
 </section>
 <section id="sensitivity-analyses" class="level2">
 <h2 class="anchored" data-anchor-id="sensitivity-analyses">Sensitivity Analyses</h2>
-<p>We repeated the mortality analysis after restricting the cohort to hospitalizations with LOS ≥2 days, requiring TBI to be the principal diagnosis, and excluding hospitalizations transferred in. The inverse association with mortality was smaller in the LOS-restricted analysis (<strong>0.70 (0.62–0.80)</strong>), a pattern consistent with early death or short stays leaving less opportunity for AWS recognition and coding. This does not identify the mechanism behind the association.</p>
+<p>We repeated the mortality analysis after restricting the cohort to hospitalizations with LOS ≥2 days, requiring TBI to be the principal diagnosis, and excluding hospitalizations transferred in. The adjusted estimates for all three sensitivity analyses are reported below.</p>
 <div class="cell">
 <div id="tbl-sensitivity" class="cell quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
@@ -1346,6 +1375,7 @@ Table&nbsp;3: Sensitivity analyses for in-hospital mortality.
 </div>
 </div>
 <p><em>Values are survey-weighted national estimates, n (%), unless stated otherwise.</em></p>
+<p>The mortality association remained inverse across the three prespecified sensitivity analyses: LOS ≥2 days <strong>0.70 (0.62–0.80)</strong>, TBI principal diagnosis <strong>0.58 (0.51–0.66)</strong>, and excluding transferred-in hospitalizations <strong>0.59 (0.52–0.68)</strong>.</p>
 </section>
 <section id="limitations" class="level2">
 <h2 class="anchored" data-anchor-id="limitations">Limitations</h2>
@@ -1355,87 +1385,1302 @@ Table&nbsp;3: Sensitivity analyses for in-hospital mortality.
 <h2 class="anchored" data-anchor-id="references-and-data-citation">References and Data Citation</h2>
 <p>Healthcare Cost and Utilization Project (HCUP). <em>National Inpatient Sample (NIS), 2017–2022</em>. Agency for Healthcare Research and Quality, Rockville, MD. HCUP data are made available through the HCUP Partners.</p>
 </section>
-<section id="appendix.-icd-10-cm-code-list" class="level2">
-<h2 class="anchored" data-anchor-id="appendix.-icd-10-cm-code-list">Appendix. ICD-10-CM Code List</h2>
-<p><strong>Table A1. ICD-10-CM code groups used to identify the cohort and study conditions.</strong></p>
+<section id="supplementary-material" class="level2">
+<h2 class="anchored" data-anchor-id="supplementary-material">Supplementary Material</h2>
+<section id="table-s1.-icd-10-cmpcs-code-list" class="level3">
+<h3 class="anchored" data-anchor-id="table-s1.-icd-10-cmpcs-code-list">Table S1. ICD-10-CM/PCS code list</h3>
+<p><strong>Table S1. ICD-10-CM and ICD-10-PCS definitions used for cohort, exposure, outcomes, and covariates.</strong></p>
 <div class="cell">
+<div id="tbl-s1" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl quarto-uncaptioned" id="tbl-s1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;4
+</figcaption>
+<div aria-describedby="tbl-s1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
 <table class="table table-striped table-hover table-sm caption-top small">
 <thead>
 <tr class="header">
 <th style="text-align: left;" data-quarto-table-cell-role="th">Condition</th>
-<th style="text-align: left;" data-quarto-table-cell-role="th">ICD-10 code(s)</th>
-<th style="text-align: left;" data-quarto-table-cell-role="th">Description</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">ICD-10-CM/PCS code or pattern</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Matching rule / description</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Valid period</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">Acute traumatic brain injury (TBI)</td>
-<td style="text-align: left;">S06.xxxA</td>
-<td style="text-align: left;">Intracranial injury, initial encounter (7th character A, length 7)</td>
+<td style="text-align: left;">Acute TBI</td>
+<td style="text-align: left;">S06</td>
+<td style="text-align: left;">prefix; Intracranial injury (requires 7th char A and len 7)</td>
+<td style="text-align: left;">2017–2022</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Active alcohol use disorder (AUD)</td>
-<td style="text-align: left;">F10.1, F10.2</td>
-<td style="text-align: left;">Alcohol abuse or dependence (excluding remission-only codes F10.11, F10.21)</td>
+<td style="text-align: left;">Active AUD</td>
+<td style="text-align: left;">F101</td>
+<td style="text-align: left;">prefix; Alcohol abuse (exclude remission-only F1011)</td>
+<td style="text-align: left;">2017–2022</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Alcohol withdrawal syndrome (AWS)</td>
-<td style="text-align: left;">F10.230–F10.239, F10.130–F10.139</td>
-<td style="text-align: left;">Alcohol withdrawal with or without delirium or perceptual disturbance (F10.13x valid from Oct 2020)</td>
+<td style="text-align: left;">Active AUD</td>
+<td style="text-align: left;">F102</td>
+<td style="text-align: left;">prefix; Alcohol dependence (exclude remission-only F1021)</td>
+<td style="text-align: left;">2017–2022</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Invasive mechanical ventilation (IMV)</td>
-<td style="text-align: left;">5A1935Z, 5A1945Z, 5A1955Z</td>
-<td style="text-align: left;">Invasive mechanical ventilation (&lt;24h, 24–96h, &gt;96h; ICD-10-PCS)</td>
+<td style="text-align: left;">AUD Remission</td>
+<td style="text-align: left;">F1011</td>
+<td style="text-align: left;">exact; Alcohol abuse in remission</td>
+<td style="text-align: left;">2017–2022</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">AUD Remission</td>
+<td style="text-align: left;">F1021</td>
+<td style="text-align: left;">exact; Alcohol dependence in remission</td>
+<td style="text-align: left;">2017–2022</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">AWS Main</td>
+<td style="text-align: left;">F10230</td>
+<td style="text-align: left;">exact; Alcohol dependence with withdrawal, uncomplicated</td>
+<td style="text-align: left;">2017–2022</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">AWS Main</td>
+<td style="text-align: left;">F10231</td>
+<td style="text-align: left;">exact; Alcohol dependence with withdrawal delirium</td>
+<td style="text-align: left;">2017–2022</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">AWS Main</td>
+<td style="text-align: left;">F10232</td>
+<td style="text-align: left;">exact; Alcohol dependence with withdrawal with perceptual disturbance</td>
+<td style="text-align: left;">2017–2022</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">AWS Main</td>
+<td style="text-align: left;">F10239</td>
+<td style="text-align: left;">exact; Alcohol dependence with withdrawal, unspecified</td>
+<td style="text-align: left;">2017–2022</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">AWS Main</td>
+<td style="text-align: left;">F10130</td>
+<td style="text-align: left;">exact; Alcohol abuse with withdrawal, uncomplicated</td>
+<td style="text-align: left;">2020-10-01 to present</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">AWS Main</td>
+<td style="text-align: left;">F10131</td>
+<td style="text-align: left;">exact; Alcohol abuse with withdrawal delirium</td>
+<td style="text-align: left;">2020-10-01 to present</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">AWS Main</td>
+<td style="text-align: left;">F10132</td>
+<td style="text-align: left;">exact; Alcohol abuse with withdrawal with perceptual disturbance</td>
+<td style="text-align: left;">2020-10-01 to present</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">AWS Main</td>
+<td style="text-align: left;">F10139</td>
+<td style="text-align: left;">exact; Alcohol abuse with withdrawal, unspecified</td>
+<td style="text-align: left;">2020-10-01 to present</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Invasive Mechanical Ventilation</td>
+<td style="text-align: left;">5A1935Z</td>
+<td style="text-align: left;">exact; Respiratory ventilation, less than 24 consecutive hours</td>
+<td style="text-align: left;">2017–2022</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Invasive Mechanical Ventilation</td>
+<td style="text-align: left;">5A1945Z</td>
+<td style="text-align: left;">exact; Respiratory ventilation, 24-96 consecutive hours</td>
+<td style="text-align: left;">2017–2022</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Invasive Mechanical Ventilation</td>
+<td style="text-align: left;">5A1955Z</td>
+<td style="text-align: left;">exact; Respiratory ventilation, greater than 96 consecutive hours</td>
+<td style="text-align: left;">2017–2022</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Pneumonia</td>
-<td style="text-align: left;">J12–J18</td>
-<td style="text-align: left;">Viral, bacterial, or unspecified pneumonia</td>
+<td style="text-align: left;">J12</td>
+<td style="text-align: left;">prefix; Pneumonia</td>
+<td style="text-align: left;">2017–2022</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Aspiration pneumonitis</td>
-<td style="text-align: left;">J69.0</td>
-<td style="text-align: left;">Pneumonitis due to inhalation of food and vomit</td>
+<td style="text-align: left;">Pneumonia</td>
+<td style="text-align: left;">J13</td>
+<td style="text-align: left;">prefix; Pneumonia</td>
+<td style="text-align: left;">2017–2022</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Other substance use disorder</td>
-<td style="text-align: left;">F11–F16, F18, F19</td>
-<td style="text-align: left;">Other drug abuse or dependence (excluding remission-only codes)</td>
+<td style="text-align: left;">Pneumonia</td>
+<td style="text-align: left;">J14</td>
+<td style="text-align: left;">prefix; Pneumonia</td>
+<td style="text-align: left;">2017–2022</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Any liver disease</td>
-<td style="text-align: left;">K70–K77</td>
-<td style="text-align: left;">Any acute or chronic liver disease</td>
+<td style="text-align: left;">Pneumonia</td>
+<td style="text-align: left;">J15</td>
+<td style="text-align: left;">prefix; Pneumonia</td>
+<td style="text-align: left;">2017–2022</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Alcoholic liver disease</td>
+<td style="text-align: left;">Pneumonia</td>
+<td style="text-align: left;">J16</td>
+<td style="text-align: left;">prefix; Pneumonia</td>
+<td style="text-align: left;">2017–2022</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Pneumonia</td>
+<td style="text-align: left;">J17</td>
+<td style="text-align: left;">prefix; Pneumonia</td>
+<td style="text-align: left;">2017–2022</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Pneumonia</td>
+<td style="text-align: left;">J18</td>
+<td style="text-align: left;">prefix; Pneumonia</td>
+<td style="text-align: left;">2017–2022</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Aspiration Pneumonitis</td>
+<td style="text-align: left;">J690</td>
+<td style="text-align: left;">exact; Pneumonitis due to inhalation of food and vomit</td>
+<td style="text-align: left;">2017–2022</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Other SUD</td>
+<td style="text-align: left;">F11</td>
+<td style="text-align: left;">prefix; Other substance use disorder (excluding remission-only)</td>
+<td style="text-align: left;">2017–2022</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Other SUD</td>
+<td style="text-align: left;">F12</td>
+<td style="text-align: left;">prefix; Other substance use disorder (excluding remission-only)</td>
+<td style="text-align: left;">2017–2022</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Other SUD</td>
+<td style="text-align: left;">F13</td>
+<td style="text-align: left;">prefix; Other substance use disorder (excluding remission-only)</td>
+<td style="text-align: left;">2017–2022</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Other SUD</td>
+<td style="text-align: left;">F14</td>
+<td style="text-align: left;">prefix; Other substance use disorder (excluding remission-only)</td>
+<td style="text-align: left;">2017–2022</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Other SUD</td>
+<td style="text-align: left;">F15</td>
+<td style="text-align: left;">prefix; Other substance use disorder (excluding remission-only)</td>
+<td style="text-align: left;">2017–2022</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Other SUD</td>
+<td style="text-align: left;">F16</td>
+<td style="text-align: left;">prefix; Other substance use disorder (excluding remission-only)</td>
+<td style="text-align: left;">2017–2022</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Other SUD</td>
+<td style="text-align: left;">F18</td>
+<td style="text-align: left;">prefix; Other substance use disorder (excluding remission-only)</td>
+<td style="text-align: left;">2017–2022</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Other SUD</td>
+<td style="text-align: left;">F19</td>
+<td style="text-align: left;">prefix; Other substance use disorder (excluding remission-only)</td>
+<td style="text-align: left;">2017–2022</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Other SUD Remission</td>
+<td style="text-align: left;">F1111</td>
+<td style="text-align: left;">exact; Other substance use disorder in remission</td>
+<td style="text-align: left;">2017–2022</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Other SUD Remission</td>
+<td style="text-align: left;">F1121</td>
+<td style="text-align: left;">exact; Other substance use disorder in remission</td>
+<td style="text-align: left;">2017–2022</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Other SUD Remission</td>
+<td style="text-align: left;">F1211</td>
+<td style="text-align: left;">exact; Other substance use disorder in remission</td>
+<td style="text-align: left;">2017–2022</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Other SUD Remission</td>
+<td style="text-align: left;">F1221</td>
+<td style="text-align: left;">exact; Other substance use disorder in remission</td>
+<td style="text-align: left;">2017–2022</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Other SUD Remission</td>
+<td style="text-align: left;">F1311</td>
+<td style="text-align: left;">exact; Other substance use disorder in remission</td>
+<td style="text-align: left;">2017–2022</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Other SUD Remission</td>
+<td style="text-align: left;">F1321</td>
+<td style="text-align: left;">exact; Other substance use disorder in remission</td>
+<td style="text-align: left;">2017–2022</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Other SUD Remission</td>
+<td style="text-align: left;">F1411</td>
+<td style="text-align: left;">exact; Other substance use disorder in remission</td>
+<td style="text-align: left;">2017–2022</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Other SUD Remission</td>
+<td style="text-align: left;">F1421</td>
+<td style="text-align: left;">exact; Other substance use disorder in remission</td>
+<td style="text-align: left;">2017–2022</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Other SUD Remission</td>
+<td style="text-align: left;">F1511</td>
+<td style="text-align: left;">exact; Other substance use disorder in remission</td>
+<td style="text-align: left;">2017–2022</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Other SUD Remission</td>
+<td style="text-align: left;">F1521</td>
+<td style="text-align: left;">exact; Other substance use disorder in remission</td>
+<td style="text-align: left;">2017–2022</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Other SUD Remission</td>
+<td style="text-align: left;">F1611</td>
+<td style="text-align: left;">exact; Other substance use disorder in remission</td>
+<td style="text-align: left;">2017–2022</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Other SUD Remission</td>
+<td style="text-align: left;">F1621</td>
+<td style="text-align: left;">exact; Other substance use disorder in remission</td>
+<td style="text-align: left;">2017–2022</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Other SUD Remission</td>
+<td style="text-align: left;">F1811</td>
+<td style="text-align: left;">exact; Other substance use disorder in remission</td>
+<td style="text-align: left;">2017–2022</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Other SUD Remission</td>
+<td style="text-align: left;">F1821</td>
+<td style="text-align: left;">exact; Other substance use disorder in remission</td>
+<td style="text-align: left;">2017–2022</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Other SUD Remission</td>
+<td style="text-align: left;">F1911</td>
+<td style="text-align: left;">exact; Other substance use disorder in remission</td>
+<td style="text-align: left;">2017–2022</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Other SUD Remission</td>
+<td style="text-align: left;">F1921</td>
+<td style="text-align: left;">exact; Other substance use disorder in remission</td>
+<td style="text-align: left;">2017–2022</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Liver Disease</td>
 <td style="text-align: left;">K70</td>
-<td style="text-align: left;">Alcoholic liver disease</td>
+<td style="text-align: left;">prefix; Any liver disease (K70-K77)</td>
+<td style="text-align: left;">2017–2022</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Skull fracture</td>
-<td style="text-align: left;">S02.0, S02.1, S02.91</td>
-<td style="text-align: left;">Fracture of vault, base, or unspecified skull (7th character A or B)</td>
+<td style="text-align: left;">Liver Disease</td>
+<td style="text-align: left;">K71</td>
+<td style="text-align: left;">prefix; Any liver disease (K70-K77)</td>
+<td style="text-align: left;">2017–2022</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Extracranial injury</td>
-<td style="text-align: left;">S10–S99</td>
-<td style="text-align: left;">Trauma outside the head (initial encounter; 7th character A, B, or C)</td>
+<td style="text-align: left;">Liver Disease</td>
+<td style="text-align: left;">K72</td>
+<td style="text-align: left;">prefix; Any liver disease (K70-K77)</td>
+<td style="text-align: left;">2017–2022</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Tobacco use</td>
-<td style="text-align: left;">F17, Z72.0, Z87.891</td>
-<td style="text-align: left;">Current nicotine dependence or documented tobacco use history</td>
+<td style="text-align: left;">Liver Disease</td>
+<td style="text-align: left;">K73</td>
+<td style="text-align: left;">prefix; Any liver disease (K70-K77)</td>
+<td style="text-align: left;">2017–2022</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Liver Disease</td>
+<td style="text-align: left;">K74</td>
+<td style="text-align: left;">prefix; Any liver disease (K70-K77)</td>
+<td style="text-align: left;">2017–2022</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Liver Disease</td>
+<td style="text-align: left;">K75</td>
+<td style="text-align: left;">prefix; Any liver disease (K70-K77)</td>
+<td style="text-align: left;">2017–2022</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Liver Disease</td>
+<td style="text-align: left;">K76</td>
+<td style="text-align: left;">prefix; Any liver disease (K70-K77)</td>
+<td style="text-align: left;">2017–2022</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Liver Disease</td>
+<td style="text-align: left;">K77</td>
+<td style="text-align: left;">prefix; Any liver disease (K70-K77)</td>
+<td style="text-align: left;">2017–2022</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Alcoholic Liver Disease</td>
+<td style="text-align: left;">K70</td>
+<td style="text-align: left;">prefix; Alcoholic liver disease</td>
+<td style="text-align: left;">2017–2022</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Skull Fracture</td>
+<td style="text-align: left;">S020</td>
+<td style="text-align: left;">prefix; Fracture of vault of skull (7th char A or B)</td>
+<td style="text-align: left;">2017–2022</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Skull Fracture</td>
+<td style="text-align: left;">S021</td>
+<td style="text-align: left;">prefix; Fracture of base of skull (7th char A or B)</td>
+<td style="text-align: left;">2017–2022</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Skull Fracture</td>
+<td style="text-align: left;">S0291</td>
+<td style="text-align: left;">prefix; Unspecified fracture of skull (7th char A or B)</td>
+<td style="text-align: left;">2017–2022</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Extracranial Injury</td>
+<td style="text-align: left;">S10-S99</td>
+<td style="text-align: left;">range; Injury outside head (7th char A, B, or C)</td>
+<td style="text-align: left;">2017–2022</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Tobacco Use</td>
+<td style="text-align: left;">F17</td>
+<td style="text-align: left;">prefix; Nicotine dependence</td>
+<td style="text-align: left;">2017–2022</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Tobacco Use</td>
+<td style="text-align: left;">Z720</td>
+<td style="text-align: left;">exact; Tobacco use</td>
+<td style="text-align: left;">2017–2022</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Tobacco Use</td>
+<td style="text-align: left;">Z87891</td>
+<td style="text-align: left;">exact; Personal history of nicotine dependence</td>
+<td style="text-align: left;">2017–2022</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">TBI subtype hierarchy: diffuse injury or brain compression</td>
+<td style="text-align: left;">S06.2*, S06.A*</td>
+<td style="text-align: left;">Qualifying S06 code with 7th character A; highest priority</td>
+<td style="text-align: left;">2017–2022</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">TBI subtype hierarchy: epidural hemorrhage</td>
+<td style="text-align: left;">S06.4*</td>
+<td style="text-align: left;">Qualifying S06 code with 7th character A; second priority</td>
+<td style="text-align: left;">2017–2022</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">TBI subtype hierarchy: subdural hemorrhage</td>
+<td style="text-align: left;">S06.5*</td>
+<td style="text-align: left;">Qualifying S06 code with 7th character A; third priority</td>
+<td style="text-align: left;">2017–2022</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">TBI subtype hierarchy: contusion/focal, SAH, or edema</td>
+<td style="text-align: left;">S06.1*, S06.3*, S06.6*</td>
+<td style="text-align: left;">Qualifying S06 code with 7th character A; fourth priority</td>
+<td style="text-align: left;">2017–2022</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">TBI subtype hierarchy: concussion, other or unspecified only</td>
+<td style="text-align: left;">S06.0*, S06.8*, S06.9*</td>
+<td style="text-align: left;">Qualifying S06 code with 7th character A; reference/remaining category</td>
+<td style="text-align: left;">2017–2022</td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
-<p><em>Values are survey-weighted national estimates, n (%), unless stated otherwise.</em></p>
+</figure>
+</div>
+</div>
+<p><em>Code patterns were applied across diagnosis fields unless the description specifies a principal-diagnosis or procedure-field rule. Count summaries elsewhere in this report use weighted n (weighted %).</em></p>
+</section>
+<section id="table-s2.-full-adjusted-mortality-model" class="level3">
+<h3 class="anchored" data-anchor-id="table-s2.-full-adjusted-mortality-model">Table S2. Full adjusted mortality model</h3>
+<p><strong>Table S2. Full multivariable survey logistic regression model for in-hospital mortality.</strong></p>
+<div class="cell">
+<div id="tbl-s2" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl quarto-uncaptioned" id="tbl-s2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;5
+</figcaption>
+<div aria-describedby="tbl-s2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="table table-striped table-hover table-sm caption-top small">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Covariate</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Level</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">aOR (95% CI)</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">p-value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Alcohol withdrawal syndrome</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">No AWS</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">AWS</td>
+<td style="text-align: left;">0.60 (0.53–0.67)</td>
+<td style="text-align: left;">&lt;0.001</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Age (per 10 years)</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">1.24 (1.19–1.29)</td>
+<td style="text-align: left;">&lt;0.001</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Sex</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Male</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Female</td>
+<td style="text-align: left;">0.88 (0.79–0.98)</td>
+<td style="text-align: left;">0.021</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Race/ethnicity</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">White</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Black</td>
+<td style="text-align: left;">0.82 (0.70–0.97)</td>
+<td style="text-align: left;">0.016</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Hispanic</td>
+<td style="text-align: left;">0.84 (0.72–0.97)</td>
+<td style="text-align: left;">0.016</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Asian or Pacific Islander</td>
+<td style="text-align: left;">0.92 (0.63–1.34)</td>
+<td style="text-align: left;">0.671</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Native American</td>
+<td style="text-align: left;">1.25 (0.95–1.65)</td>
+<td style="text-align: left;">0.112</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Other</td>
+<td style="text-align: left;">1.08 (0.86–1.36)</td>
+<td style="text-align: left;">0.500</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Primary expected payer</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Medicare</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Medicaid</td>
+<td style="text-align: left;">1.10 (0.95–1.28)</td>
+<td style="text-align: left;">0.188</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Private including HMO</td>
+<td style="text-align: left;">1.00 (0.88–1.15)</td>
+<td style="text-align: left;">0.948</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Self-pay</td>
+<td style="text-align: left;">1.29 (1.08–1.54)</td>
+<td style="text-align: left;">0.005</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">No charge</td>
+<td style="text-align: left;">1.13 (0.70–1.81)</td>
+<td style="text-align: left;">0.621</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Other</td>
+<td style="text-align: left;">1.29 (1.05–1.60)</td>
+<td style="text-align: left;">0.017</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Median household income quartile for patient ZIP code</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Q1</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Q2</td>
+<td style="text-align: left;">1.01 (0.89–1.14)</td>
+<td style="text-align: left;">0.897</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Q3</td>
+<td style="text-align: left;">0.96 (0.85–1.09)</td>
+<td style="text-align: left;">0.509</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Q4</td>
+<td style="text-align: left;">0.99 (0.86–1.13)</td>
+<td style="text-align: left;">0.839</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Discharge year</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">2017</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">2018</td>
+<td style="text-align: left;">0.95 (0.82–1.12)</td>
+<td style="text-align: left;">0.554</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">2019</td>
+<td style="text-align: left;">0.85 (0.72–1.00)</td>
+<td style="text-align: left;">0.054</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">2020</td>
+<td style="text-align: left;">0.92 (0.79–1.07)</td>
+<td style="text-align: left;">0.276</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">2021</td>
+<td style="text-align: left;">1.00 (0.85–1.17)</td>
+<td style="text-align: left;">0.968</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">2022</td>
+<td style="text-align: left;">0.91 (0.79–1.06)</td>
+<td style="text-align: left;">0.244</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Hospital census region</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Northeast</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Midwest</td>
+<td style="text-align: left;">1.24 (1.07–1.43)</td>
+<td style="text-align: left;">0.004</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">South</td>
+<td style="text-align: left;">1.17 (1.01–1.34)</td>
+<td style="text-align: left;">0.034</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">West</td>
+<td style="text-align: left;">1.18 (1.02–1.37)</td>
+<td style="text-align: left;">0.024</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Hospital bed size</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Small</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Medium</td>
+<td style="text-align: left;">0.97 (0.82–1.14)</td>
+<td style="text-align: left;">0.704</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Large</td>
+<td style="text-align: left;">0.96 (0.82–1.11)</td>
+<td style="text-align: left;">0.572</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Hospital location and teaching status</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Rural</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Urban, non-teaching</td>
+<td style="text-align: left;">0.89 (0.62–1.28)</td>
+<td style="text-align: left;">0.542</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Urban, teaching</td>
+<td style="text-align: left;">0.95 (0.68–1.33)</td>
+<td style="text-align: left;">0.759</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">TBI injury subtype</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Concussion, other or unspecified only</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Diffuse injury or brain compression</td>
+<td style="text-align: left;">9.93 (7.95–12.41)</td>
+<td style="text-align: left;">&lt;0.001</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Epidural hemorrhage</td>
+<td style="text-align: left;">3.05 (2.24–4.14)</td>
+<td style="text-align: left;">&lt;0.001</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Subdural hemorrhage</td>
+<td style="text-align: left;">4.50 (3.66–5.54)</td>
+<td style="text-align: left;">&lt;0.001</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Contusion/focal, SAH, or edema</td>
+<td style="text-align: left;">2.76 (2.21–3.46)</td>
+<td style="text-align: left;">&lt;0.001</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Skull fracture</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">1.76 (1.58–1.95)</td>
+<td style="text-align: left;">&lt;0.001</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Any injury code outside the head (initial encounter)</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">0.97 (0.88–1.07)</td>
+<td style="text-align: left;">0.560</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">TBI as principal diagnosis</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">1.17 (1.04–1.31)</td>
+<td style="text-align: left;">0.009</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Chronic comorbidity count (Elixhauser refined)</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">0.94 (0.83–1.06)</td>
+<td style="text-align: left;">0.304</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">0.84 (0.73–0.97)</td>
+<td style="text-align: left;">0.015</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">&gt;=3</td>
+<td style="text-align: left;">0.84 (0.72–0.97)</td>
+<td style="text-align: left;">0.019</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Any liver disease (K70–K77)</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">2.75 (2.47–3.06)</td>
+<td style="text-align: left;">&lt;0.001</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Other substance use disorder</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">0.78 (0.68–0.90)</td>
+<td style="text-align: left;">&lt;0.001</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<p><em>Estimates are adjusted odds ratios (95% CI); p-values are two-sided. Weighted n (%) is the reporting convention; coefficient estimates for levels with ≤10 unweighted complete-case records are suppressed.</em></p>
+</section>
+<section id="table-s3.-missing-data-by-aws-group" class="level3">
+<h3 class="anchored" data-anchor-id="table-s3.-missing-data-by-aws-group">Table S3. Missing data by AWS group</h3>
+<p><strong>Table S3. Weighted missingness in model covariates and outcomes, by AWS group.</strong></p>
+<div class="cell">
+<div id="tbl-s3" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl quarto-uncaptioned" id="tbl-s3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;6
+</figcaption>
+<div aria-describedby="tbl-s3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="table table-striped table-hover table-sm caption-top small">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Variable</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">AWS group</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Missing, weighted n</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Missing (weighted %)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Age (per 10 years)</td>
+<td style="text-align: left;">No AWS</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0.00%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Age (per 10 years)</td>
+<td style="text-align: left;">AWS</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0.00%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Sex</td>
+<td style="text-align: left;">No AWS</td>
+<td style="text-align: left;">90</td>
+<td style="text-align: left;">0.05%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Sex</td>
+<td style="text-align: left;">AWS</td>
+<td style="text-align: left;">≤10</td>
+<td style="text-align: left;">≤10</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Race/ethnicity</td>
+<td style="text-align: left;">No AWS</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0.00%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Race/ethnicity</td>
+<td style="text-align: left;">AWS</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0.00%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Primary expected payer</td>
+<td style="text-align: left;">No AWS</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0.00%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Primary expected payer</td>
+<td style="text-align: left;">AWS</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0.00%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Median household income quartile for patient ZIP code</td>
+<td style="text-align: left;">No AWS</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0.00%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Median household income quartile for patient ZIP code</td>
+<td style="text-align: left;">AWS</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0.00%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Discharge year</td>
+<td style="text-align: left;">No AWS</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0.00%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Discharge year</td>
+<td style="text-align: left;">AWS</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0.00%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Hospital census region</td>
+<td style="text-align: left;">No AWS</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0.00%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Hospital census region</td>
+<td style="text-align: left;">AWS</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0.00%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Hospital bed size</td>
+<td style="text-align: left;">No AWS</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0.00%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Hospital bed size</td>
+<td style="text-align: left;">AWS</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0.00%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Hospital location and teaching status</td>
+<td style="text-align: left;">No AWS</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0.00%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Hospital location and teaching status</td>
+<td style="text-align: left;">AWS</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0.00%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">TBI injury subtype</td>
+<td style="text-align: left;">No AWS</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0.00%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">TBI injury subtype</td>
+<td style="text-align: left;">AWS</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0.00%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Skull fracture</td>
+<td style="text-align: left;">No AWS</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0.00%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Skull fracture</td>
+<td style="text-align: left;">AWS</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0.00%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Any injury code outside the head (initial encounter)</td>
+<td style="text-align: left;">No AWS</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0.00%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Any injury code outside the head (initial encounter)</td>
+<td style="text-align: left;">AWS</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0.00%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">TBI as principal diagnosis</td>
+<td style="text-align: left;">No AWS</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0.00%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">TBI as principal diagnosis</td>
+<td style="text-align: left;">AWS</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0.00%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Chronic comorbidity count (Elixhauser refined)</td>
+<td style="text-align: left;">No AWS</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0.00%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Chronic comorbidity count (Elixhauser refined)</td>
+<td style="text-align: left;">AWS</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0.00%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Any liver disease (K70–K77)</td>
+<td style="text-align: left;">No AWS</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0.00%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Any liver disease (K70–K77)</td>
+<td style="text-align: left;">AWS</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0.00%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Other substance use disorder</td>
+<td style="text-align: left;">No AWS</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0.00%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Other substance use disorder</td>
+<td style="text-align: left;">AWS</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0.00%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">In-hospital mortality</td>
+<td style="text-align: left;">No AWS</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0.00%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">In-hospital mortality</td>
+<td style="text-align: left;">AWS</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0.00%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Invasive mechanical ventilation</td>
+<td style="text-align: left;">No AWS</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0.00%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Invasive mechanical ventilation</td>
+<td style="text-align: left;">AWS</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0.00%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Pneumonia or aspiration pneumonitis</td>
+<td style="text-align: left;">No AWS</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0.00%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Pneumonia or aspiration pneumonitis</td>
+<td style="text-align: left;">AWS</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0.00%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Institutional discharge (among survivors)</td>
+<td style="text-align: left;">No AWS</td>
+<td style="text-align: left;">10,160</td>
+<td style="text-align: left;">5.31%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Institutional discharge (among survivors)</td>
+<td style="text-align: left;">AWS</td>
+<td style="text-align: left;">2,330</td>
+<td style="text-align: left;">4.00%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Discharge against medical advice (among survivors)</td>
+<td style="text-align: left;">No AWS</td>
+<td style="text-align: left;">10,160</td>
+<td style="text-align: left;">5.31%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Discharge against medical advice (among survivors)</td>
+<td style="text-align: left;">AWS</td>
+<td style="text-align: left;">2,330</td>
+<td style="text-align: left;">4.00%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Length of stay, days</td>
+<td style="text-align: left;">No AWS</td>
+<td style="text-align: left;">≤10</td>
+<td style="text-align: left;">≤10</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Length of stay, days</td>
+<td style="text-align: left;">AWS</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0.00%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Hospital cost (2022 USD)</td>
+<td style="text-align: left;">No AWS</td>
+<td style="text-align: left;">2,320</td>
+<td style="text-align: left;">1.21%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Hospital cost (2022 USD)</td>
+<td style="text-align: left;">AWS</td>
+<td style="text-align: left;">640</td>
+<td style="text-align: left;">1.10%</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<p><em>Missingness is reported as weighted n (weighted %) within each AWS group; cells with ≤10 unweighted records are suppressed.</em></p>
+</section>
+<section id="table-s4.-annual-aws-prevalence" class="level3">
+<h3 class="anchored" data-anchor-id="table-s4.-annual-aws-prevalence">Table S4. Annual AWS prevalence</h3>
+<p><strong>Table S4. Annual weighted prevalence of coded AWS in the analytic cohort.</strong></p>
+<div class="cell">
+<div id="tbl-s4" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl quarto-uncaptioned" id="tbl-s4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;7
+</figcaption>
+<div aria-describedby="tbl-s4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="table table-striped table-hover table-sm caption-top small">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Year</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Weighted cohort n</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Weighted AWS n</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">AWS prevalence (weighted %)</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">95% CI</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">p-for-trend (continuous year)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">2017</td>
+<td style="text-align: left;">41,280</td>
+<td style="text-align: left;">8,530</td>
+<td style="text-align: left;">20.7%</td>
+<td style="text-align: left;">19.7%–21.7%</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2018</td>
+<td style="text-align: left;">41,660</td>
+<td style="text-align: left;">9,310</td>
+<td style="text-align: left;">22.4%</td>
+<td style="text-align: left;">21.3%–23.5%</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2019</td>
+<td style="text-align: left;">40,890</td>
+<td style="text-align: left;">8,960</td>
+<td style="text-align: left;">21.9%</td>
+<td style="text-align: left;">20.9%–22.9%</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2020</td>
+<td style="text-align: left;">43,370</td>
+<td style="text-align: left;">10,520</td>
+<td style="text-align: left;">24.3%</td>
+<td style="text-align: left;">23.2%–25.3%</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2021</td>
+<td style="text-align: left;">41,670</td>
+<td style="text-align: left;">10,610</td>
+<td style="text-align: left;">25.5%</td>
+<td style="text-align: left;">24.4%–26.6%</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2022</td>
+<td style="text-align: left;">40,690</td>
+<td style="text-align: left;">10,340</td>
+<td style="text-align: left;">25.4%</td>
+<td style="text-align: left;">24.3%–26.5%</td>
+<td style="text-align: left;">&lt;0.001</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<p><em>Annual counts are weighted n and prevalence is weighted %. P-for-trend is from a survey-weighted logistic regression with year entered as a continuous term. Cells with ≤10 unweighted records are suppressed.</em></p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

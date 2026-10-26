@@ -4,7 +4,8 @@ Public report and aggregate results from the National Inpatient Sample, 2017–2
 
 - [Read the report](https://msaadasif.github.io/NIS-Oct-Neuro9/)
 - [Download the Word report](https://msaadasif.github.io/NIS-Oct-Neuro9/quarto/index.docx)
-- Public tables: [baseline characteristics](docs/data/table1.csv), [in-hospital outcomes](docs/data/outcomes.csv), and [sensitivity analyses](docs/data/sensitivity.csv)
+- Public tables: [baseline characteristics (Table 1)](docs/data/table1.csv), [in-hospital outcomes (Table 2)](docs/data/outcomes.csv), and [sensitivity analyses (Table 3)](docs/data/sensitivity.csv).
+- Supplementary tables: [ICD-10-CM/PCS code list (Table S1)](docs/data/table_s1.csv), [full mortality model (Table S2)](docs/data/table_s2.csv), [missingness by AWS group (Table S3)](docs/data/table_s3.csv), and [annual AWS prevalence (Table S4)](docs/data/table_s4.csv).
 
 Values are survey-weighted national estimates, n (%), unless stated otherwise.
 

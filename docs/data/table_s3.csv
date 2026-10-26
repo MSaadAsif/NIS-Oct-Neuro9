@@ -1,0 +1,47 @@
+Variable,AWS group,"Missing, weighted n",Missing (weighted %)
+Age (per 10 years),No AWS,0,0.00%
+Age (per 10 years),AWS,0,0.00%
+Sex,No AWS,90,0.05%
+Sex,AWS,≤10,≤10
+Race/ethnicity,No AWS,0,0.00%
+Race/ethnicity,AWS,0,0.00%
+Primary expected payer,No AWS,0,0.00%
+Primary expected payer,AWS,0,0.00%
+Median household income quartile for patient ZIP code,No AWS,0,0.00%
+Median household income quartile for patient ZIP code,AWS,0,0.00%
+Discharge year,No AWS,0,0.00%
+Discharge year,AWS,0,0.00%
+Hospital census region,No AWS,0,0.00%
+Hospital census region,AWS,0,0.00%
+Hospital bed size,No AWS,0,0.00%
+Hospital bed size,AWS,0,0.00%
+Hospital location and teaching status,No AWS,0,0.00%
+Hospital location and teaching status,AWS,0,0.00%
+TBI injury subtype,No AWS,0,0.00%
+TBI injury subtype,AWS,0,0.00%
+Skull fracture,No AWS,0,0.00%
+Skull fracture,AWS,0,0.00%
+Any injury code outside the head (initial encounter),No AWS,0,0.00%
+Any injury code outside the head (initial encounter),AWS,0,0.00%
+TBI as principal diagnosis,No AWS,0,0.00%
+TBI as principal diagnosis,AWS,0,0.00%
+Chronic comorbidity count (Elixhauser refined),No AWS,0,0.00%
+Chronic comorbidity count (Elixhauser refined),AWS,0,0.00%
+Any liver disease (K70–K77),No AWS,0,0.00%
+Any liver disease (K70–K77),AWS,0,0.00%
+Other substance use disorder,No AWS,0,0.00%
+Other substance use disorder,AWS,0,0.00%
+In-hospital mortality,No AWS,0,0.00%
+In-hospital mortality,AWS,0,0.00%
+Invasive mechanical ventilation,No AWS,0,0.00%
+Invasive mechanical ventilation,AWS,0,0.00%
+Pneumonia or aspiration pneumonitis,No AWS,0,0.00%
+Pneumonia or aspiration pneumonitis,AWS,0,0.00%
+Institutional discharge (among survivors),No AWS,"10,160",5.31%
+Institutional discharge (among survivors),AWS,"2,330",4.00%
+Discharge against medical advice (among survivors),No AWS,"10,160",5.31%
+Discharge against medical advice (among survivors),AWS,"2,330",4.00%
+"Length of stay, days",No AWS,≤10,≤10
+"Length of stay, days",AWS,0,0.00%
+Hospital cost (2022 USD),No AWS,"2,320",1.21%
+Hospital cost (2022 USD),AWS,640,1.10%

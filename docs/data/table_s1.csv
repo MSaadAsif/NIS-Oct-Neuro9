@@ -1,0 +1,70 @@
+Condition,ICD-10-CM/PCS code or pattern,Matching rule / description,Valid period
+Acute TBI,S06,prefix; Intracranial injury (requires 7th char A and len 7),2017–2022
+Active AUD,F101,prefix; Alcohol abuse (exclude remission-only F1011),2017–2022
+Active AUD,F102,prefix; Alcohol dependence (exclude remission-only F1021),2017–2022
+AUD Remission,F1011,exact; Alcohol abuse in remission,2017–2022
+AUD Remission,F1021,exact; Alcohol dependence in remission,2017–2022
+AWS Main,F10230,"exact; Alcohol dependence with withdrawal, uncomplicated",2017–2022
+AWS Main,F10231,exact; Alcohol dependence with withdrawal delirium,2017–2022
+AWS Main,F10232,exact; Alcohol dependence with withdrawal with perceptual disturbance,2017–2022
+AWS Main,F10239,"exact; Alcohol dependence with withdrawal, unspecified",2017–2022
+AWS Main,F10130,"exact; Alcohol abuse with withdrawal, uncomplicated",2020-10-01 to present
+AWS Main,F10131,exact; Alcohol abuse with withdrawal delirium,2020-10-01 to present
+AWS Main,F10132,exact; Alcohol abuse with withdrawal with perceptual disturbance,2020-10-01 to present
+AWS Main,F10139,"exact; Alcohol abuse with withdrawal, unspecified",2020-10-01 to present
+Invasive Mechanical Ventilation,5A1935Z,"exact; Respiratory ventilation, less than 24 consecutive hours",2017–2022
+Invasive Mechanical Ventilation,5A1945Z,"exact; Respiratory ventilation, 24-96 consecutive hours",2017–2022
+Invasive Mechanical Ventilation,5A1955Z,"exact; Respiratory ventilation, greater than 96 consecutive hours",2017–2022
+Pneumonia,J12,prefix; Pneumonia,2017–2022
+Pneumonia,J13,prefix; Pneumonia,2017–2022
+Pneumonia,J14,prefix; Pneumonia,2017–2022
+Pneumonia,J15,prefix; Pneumonia,2017–2022
+Pneumonia,J16,prefix; Pneumonia,2017–2022
+Pneumonia,J17,prefix; Pneumonia,2017–2022
+Pneumonia,J18,prefix; Pneumonia,2017–2022
+Aspiration Pneumonitis,J690,exact; Pneumonitis due to inhalation of food and vomit,2017–2022
+Other SUD,F11,prefix; Other substance use disorder (excluding remission-only),2017–2022
+Other SUD,F12,prefix; Other substance use disorder (excluding remission-only),2017–2022
+Other SUD,F13,prefix; Other substance use disorder (excluding remission-only),2017–2022
+Other SUD,F14,prefix; Other substance use disorder (excluding remission-only),2017–2022
+Other SUD,F15,prefix; Other substance use disorder (excluding remission-only),2017–2022
+Other SUD,F16,prefix; Other substance use disorder (excluding remission-only),2017–2022
+Other SUD,F18,prefix; Other substance use disorder (excluding remission-only),2017–2022
+Other SUD,F19,prefix; Other substance use disorder (excluding remission-only),2017–2022
+Other SUD Remission,F1111,exact; Other substance use disorder in remission,2017–2022
+Other SUD Remission,F1121,exact; Other substance use disorder in remission,2017–2022
+Other SUD Remission,F1211,exact; Other substance use disorder in remission,2017–2022
+Other SUD Remission,F1221,exact; Other substance use disorder in remission,2017–2022
+Other SUD Remission,F1311,exact; Other substance use disorder in remission,2017–2022
+Other SUD Remission,F1321,exact; Other substance use disorder in remission,2017–2022
+Other SUD Remission,F1411,exact; Other substance use disorder in remission,2017–2022
+Other SUD Remission,F1421,exact; Other substance use disorder in remission,2017–2022
+Other SUD Remission,F1511,exact; Other substance use disorder in remission,2017–2022
+Other SUD Remission,F1521,exact; Other substance use disorder in remission,2017–2022
+Other SUD Remission,F1611,exact; Other substance use disorder in remission,2017–2022
+Other SUD Remission,F1621,exact; Other substance use disorder in remission,2017–2022
+Other SUD Remission,F1811,exact; Other substance use disorder in remission,2017–2022
+Other SUD Remission,F1821,exact; Other substance use disorder in remission,2017–2022
+Other SUD Remission,F1911,exact; Other substance use disorder in remission,2017–2022
+Other SUD Remission,F1921,exact; Other substance use disorder in remission,2017–2022
+Liver Disease,K70,prefix; Any liver disease (K70-K77),2017–2022
+Liver Disease,K71,prefix; Any liver disease (K70-K77),2017–2022
+Liver Disease,K72,prefix; Any liver disease (K70-K77),2017–2022
+Liver Disease,K73,prefix; Any liver disease (K70-K77),2017–2022
+Liver Disease,K74,prefix; Any liver disease (K70-K77),2017–2022
+Liver Disease,K75,prefix; Any liver disease (K70-K77),2017–2022
+Liver Disease,K76,prefix; Any liver disease (K70-K77),2017–2022
+Liver Disease,K77,prefix; Any liver disease (K70-K77),2017–2022
+Alcoholic Liver Disease,K70,prefix; Alcoholic liver disease,2017–2022
+Skull Fracture,S020,prefix; Fracture of vault of skull (7th char A or B),2017–2022
+Skull Fracture,S021,prefix; Fracture of base of skull (7th char A or B),2017–2022
+Skull Fracture,S0291,prefix; Unspecified fracture of skull (7th char A or B),2017–2022
+Extracranial Injury,S10-S99,"range; Injury outside head (7th char A, B, or C)",2017–2022
+Tobacco Use,F17,prefix; Nicotine dependence,2017–2022
+Tobacco Use,Z720,exact; Tobacco use,2017–2022
+Tobacco Use,Z87891,exact; Personal history of nicotine dependence,2017–2022
+TBI subtype hierarchy: diffuse injury or brain compression,"S06.2*, S06.A*",Qualifying S06 code with 7th character A; highest priority,2017–2022
+TBI subtype hierarchy: epidural hemorrhage,S06.4*,Qualifying S06 code with 7th character A; second priority,2017–2022
+TBI subtype hierarchy: subdural hemorrhage,S06.5*,Qualifying S06 code with 7th character A; third priority,2017–2022
+"TBI subtype hierarchy: contusion/focal, SAH, or edema","S06.1*, S06.3*, S06.6*",Qualifying S06 code with 7th character A; fourth priority,2017–2022
+"TBI subtype hierarchy: concussion, other or unspecified only","S06.0*, S06.8*, S06.9*",Qualifying S06 code with 7th character A; reference/remaining category,2017–2022
