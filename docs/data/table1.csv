@@ -1,70 +1,118 @@
-"Characteristic","Overall (n = 49914)","No AWS (n = 38260)","AWS (n = 11654)","p_value"
-"Age, years","53 (38, 63)","52 (36, 63)","56 (46, 64)","<0.001"
-"Sex",NA,NA,NA,"<0.001"
-"Male","Masked","Masked","Masked","Masked"
-"Female","Masked","Masked","Masked","Masked"
-"Unknown","Masked","Masked","Masked","Masked"
-"Race/ethnicity",NA,NA,NA,"<0.001"
-"White","65%","63%","71%",NA
-"Black","13%","14%","9.9%",NA
-"Hispanic","14%","15%","13%",NA
-"Asian or Pacific Islander","1.4%","1.5%","1.1%",NA
-"Native American","2.3%","2.2%","2.5%",NA
-"Other","3.9%","4.0%","3.3%",NA
-"Unknown","9,510","7,565","1,945",NA
-"Primary expected payer",NA,NA,NA,"<0.001"
-"Medicare","25%","24%","27%",NA
-"Medicaid","29%","27%","34%",NA
-"Private including HMO","28%","30%","24%",NA
-"Self-pay","12%","12%","9.5%",NA
-"No charge","1.1%","1.1%","1.0%",NA
-"Other","4.8%","4.8%","4.9%",NA
-"Unknown","770","625","145",NA
-"Median household income quartile for patient ZIP code",NA,NA,NA,"<0.001"
-"Q1","31%","32%","29%",NA
-"Q2","25%","25%","24%",NA
-"Q3","24%","24%","25%",NA
-"Q4","20%","19%","22%",NA
-"Unknown","10,015","7,010","3,005",NA
-"Calendar era",NA,NA,NA,"<0.001"
-"2017–2019","50%","51%","46%",NA
-"2020","17%","17%","18%",NA
-"2021–2022","33%","32%","36%",NA
-"Hospital census region",NA,NA,NA,"<0.001"
-"Northeast","17%","16%","19%",NA
-"Midwest","23%","24%","22%",NA
-"South","33%","33%","30%",NA
-"West","27%","27%","29%",NA
-"Hospital bed size",NA,NA,NA,"0.001"
-"Small","10%","9.9%","11%",NA
-"Medium","26%","26%","26%",NA
-"Large","64%","64%","62%",NA
-"Hospital location and teaching status",NA,NA,NA,"<0.001"
-"Rural","2.2%","2.2%","2.4%",NA
-"Urban, non-teaching","9.8%","9.4%","11%",NA
-"Urban, teaching","88%","88%","87%",NA
-"TBI injury subtype",NA,NA,NA,"<0.001"
-"Concussion, other or unspecified only","24%","25%","19%",NA
-"Diffuse injury or brain compression","7.0%","6.9%","7.2%",NA
-"Epidural hemorrhage","4.1%","4.2%","3.8%",NA
-"Subdural hemorrhage","41%","39%","47%",NA
-"Contusion/focal, SAH, or edema","24%","24%","22%",NA
-"Skull fracture","20%","22%","16%","<0.001"
-"Any injury code outside the head (initial encounter)","45%","48%","38%","<0.001"
-"TBI as principal diagnosis","68%","68%","67%","0.004"
-"Chronic comorbidity count (Elixhauser refined)",NA,NA,NA,"<0.001"
-"0","35%","39%","23%",NA
-"1","29%","28%","31%",NA
-"2","19%","17%","24%",NA
-">=3","17%","16%","22%",NA
-"Hypertension","44%","41%","54%","<0.001"
-"Diabetes mellitus","11%","11%","11%","0.5"
-"Chronic pulmonary disease","12%","12%","14%","<0.001"
-"Heart failure","4.9%","4.3%","6.7%","<0.001"
-"Chronic kidney disease","3.1%","3.2%","3.0%","0.4"
-"Depression","13%","12%","18%","<0.001"
-"Obesity","5.6%","5.6%","5.4%","0.5"
-"Any liver disease (K70–K77)","14%","10%","26%","<0.001"
-"Alcoholic liver disease (K70)","8.6%","5.9%","18%","<0.001"
-"Other substance use disorder","16%","17%","15%","<0.001"
-"Current or past tobacco/nicotine use","45%","44%","47%","<0.001"
+Characteristic,Overall,No AWS,AWS,p-value
+"Age, years","53 (38, 63)","52 (36, 63)","56 (46, 64)",<0.001
+Sex,,,,<0.001
+Male,78%,77%,81%,
+Female,22%,23%,19%,
+Unknown,Masked,<0.1%,≤10,
+Race/ethnicity,,,,<0.001
+White,62%,61%,68%,
+Black,13%,14%,9.6%,
+Hispanic,14%,14%,12%,
+Asian or Pacific Islander,1.4%,1.4%,1.1%,
+Native American,2.2%,2.1%,2.4%,
+Other,3.7%,3.9%,3.2%,
+Unknown,3.8%,4.0%,3.3%,
+Primary expected payer,,,,<0.001
+Medicare,25%,24%,27%,
+Medicaid,29%,27%,34%,
+Private including HMO,28%,30%,24%,
+Self-pay,12%,12%,9.5%,
+No charge,1.1%,1.1%,1.0%,
+Other,4.8%,4.8%,4.9%,
+Unknown,0.3%,0.3%,0.2%,
+Median household income quartile for patient ZIP code,,,,<0.001
+Q1,30%,31%,28%,
+Q2,24%,24%,23%,
+Q3,23%,23%,24%,
+Q4,19%,18%,20%,
+Unknown,4.0%,3.7%,5.2%,
+Calendar era,,,,
+2017–2019,50%,51%,46%,
+2020,17%,17%,18%,
+2021–2022,33%,32%,36%,
+Unknown,≤10,≤10,≤10,
+Hospital census region,,,,
+Northeast,17%,16%,19%,
+Midwest,23%,24%,22%,
+South,33%,33%,30%,
+West,27%,27%,29%,
+Unknown,≤10,≤10,≤10,
+Hospital bed size,,,,
+Small,10%,9.9%,11%,
+Medium,26%,26%,26%,
+Large,64%,64%,62%,
+Unknown,≤10,≤10,≤10,
+Hospital location and teaching status,,,,
+Rural,2.2%,2.2%,2.4%,
+"Urban, non-teaching",9.8%,9.4%,11%,
+"Urban, teaching",88%,88%,87%,
+Unknown,≤10,≤10,≤10,
+TBI injury subtype,,,,
+"Concussion, other or unspecified only",24%,25%,19%,
+Diffuse injury or brain compression,7.0%,6.9%,7.2%,
+Epidural hemorrhage,4.1%,4.2%,3.8%,
+Subdural hemorrhage,41%,39%,47%,
+"Contusion/focal, SAH, or edema",24%,24%,22%,
+Unknown,≤10,≤10,≤10,
+Skull fracture,,,,
+0,80%,78%,84%,
+1,20%,22%,16%,
+Unknown,≤10,≤10,≤10,
+Any injury code outside the head (initial encounter),,,,
+0,55%,52%,62%,
+1,45%,48%,38%,
+Unknown,≤10,≤10,≤10,
+TBI as principal diagnosis,,,,
+0,32%,32%,33%,
+1,68%,68%,67%,
+Unknown,≤10,≤10,≤10,
+Chronic comorbidity count (Elixhauser refined),,,,
+0,35%,39%,23%,
+1,29%,28%,31%,
+2,19%,17%,24%,
+>=3,17%,16%,22%,
+Unknown,≤10,≤10,≤10,
+Hypertension,,,,
+0,56%,59%,46%,
+1,44%,41%,54%,
+Unknown,≤10,≤10,≤10,
+Diabetes mellitus,,,,
+0,89%,89%,89%,
+1,11%,11%,11%,
+Unknown,≤10,≤10,≤10,
+Chronic pulmonary disease,,,,
+0,88%,88%,86%,
+1,12%,12%,14%,
+Unknown,≤10,≤10,≤10,
+Heart failure,,,,
+0,95%,96%,93%,
+1,4.9%,4.3%,6.7%,
+Unknown,≤10,≤10,≤10,
+Chronic kidney disease,,,,
+0,97%,97%,97%,
+1,3.1%,3.2%,3.0%,
+Unknown,≤10,≤10,≤10,
+Depression,,,,
+0,87%,88%,82%,
+1,13%,12%,18%,
+Unknown,≤10,≤10,≤10,
+Obesity,,,,
+0,94%,94%,95%,
+1,5.6%,5.6%,5.4%,
+Unknown,≤10,≤10,≤10,
+Any liver disease (K70–K77),,,,
+0,86%,90%,74%,
+1,14%,10%,26%,
+Unknown,≤10,≤10,≤10,
+Alcoholic liver disease (K70),,,,
+0,91%,94%,82%,
+1,8.6%,5.9%,18%,
+Unknown,≤10,≤10,≤10,
+Other substance use disorder,,,,
+0,84%,83%,85%,
+1,16%,17%,15%,
+Unknown,≤10,≤10,≤10,
+Current or past tobacco/nicotine use,,,,
+0,55%,56%,53%,
+1,45%,44%,47%,
+Unknown,≤10,≤10,≤10,
