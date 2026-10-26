@@ -1,8 +1,8 @@
-Outcome,No AWS,AWS,Unadjusted OR/ratio (95% CI),Adjusted OR/ratio (95% CI),Adjusted difference (95% CI),p-value
-In-hospital mortality,"5.3% (2,028)",4.0% (466),0.74 (0.67–0.83),0.60 (0.53–0.67),-2.04% (-2.46% to -1.63%),<0.001
-Invasive mechanical ventilation,"22.1% (8,466)","26.0% (3,030)",1.24 (1.18–1.30),1.42 (1.34–1.50),+5.97% (+4.94% to +7.00%),<0.001
-Pneumonia or aspiration pneumonitis,"7.8% (3,000)","18.0% (2,097)",2.58 (2.43–2.74),2.32 (2.17–2.49),+8.49% (+7.70% to +9.29%),<0.001
-Institutional discharge (among survivors),"25.7% (9,310)","39.9% (4,462)",1.92 (1.83–2.01),1.74 (1.65–1.84),+10.38% (+9.35% to +11.40%),<0.001
-Discharge against medical advice (among survivors),"4.2% (1,505)",5.6% (630),1.38 (1.25–1.52),1.49 (1.34–1.66),+1.75% (+1.23% to +2.27%),<0.001
+Outcome,"No AWS, N = 191,300","AWS, N = 58,270",Unadjusted OR/ratio (95% CI),Adjusted OR/ratio (95% CI),Adjusted difference (95% CI),p-value
+In-hospital mortality,"10,140 (5.3%)","2,330 (4.0%)",0.74 (0.67–0.83),0.60 (0.53–0.67),-2.04% (-2.46% to -1.63%),<0.001
+Invasive mechanical ventilation,"42,330 (22.1%)","15,150 (26.0%)",1.24 (1.18–1.30),1.42 (1.34–1.50),+5.97% (+4.94% to +7.00%),<0.001
+Pneumonia or aspiration pneumonitis,"15,000 (7.8%)","10,480 (18.0%)",2.58 (2.43–2.74),2.32 (2.17–2.49),+8.49% (+7.70% to +9.29%),<0.001
+Institutional discharge (among survivors),"46,550 (25.7%)","22,310 (39.9%)",1.92 (1.83–2.01),1.74 (1.65–1.84),+10.38% (+9.35% to +11.40%),<0.001
+Discharge against medical advice (among survivors),"7,530 (4.2%)","3,150 (5.6%)",1.38 (1.25–1.52),1.49 (1.34–1.66),+1.75% (+1.23% to +2.27%),<0.001
 Length of stay,6.7 days,12.1 days,1.80 (1.75–1.86),1.70 (1.64–1.75),+4.69 days (+4.38 to +5.00),<0.001
 Hospital cost,"$29,446","$42,535",1.44 (1.41–1.48),1.46 (1.42–1.51),"+$13,543 (+$12,456 to +$14,630)",<0.001

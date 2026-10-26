@@ -1,5 +1,5 @@
-Analysis,Hospitalizations (n),Deaths (n),Adjusted OR (95% CI),p-value
-Primary analysis (full cohort),"45,949","2,217",0.60 (0.53–0.67),<0.001
-LOS ≥2 days,"37,494","1,657",0.70 (0.62–0.80),<0.001
-TBI as principal diagnosis,"31,234","1,798",0.58 (0.51–0.66),<0.001
-Exclude transferred-in,"38,511","1,732",0.59 (0.52–0.68),<0.001
+Analysis,"Hospitalizations, weighted n","Deaths, weighted n (weighted %)",Adjusted OR (95% CI),p-value
+Primary analysis (full cohort),"229,740","11,080 (4.8%)",0.60 (0.53–0.67),<0.001
+LOS ≥2 days,"187,470","8,280 (4.4%)",0.70 (0.62–0.80),<0.001
+TBI as principal diagnosis,"156,170","8,990 (5.8%)",0.58 (0.51–0.66),<0.001
+Exclude transferred-in,"192,550","8,660 (4.5%)",0.59 (0.52–0.68),<0.001
