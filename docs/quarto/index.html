@@ -106,10 +106,10 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#key-findings" id="toc-key-findings" class="nav-link active" data-scroll-target="#key-findings">Key Findings</a></li>
   <li><a href="#methods" id="toc-methods" class="nav-link" data-scroll-target="#methods">Methods</a></li>
-  <li><a href="#figure-1.-cohort-flow" id="toc-figure-1.-cohort-flow" class="nav-link" data-scroll-target="#figure-1.-cohort-flow">Figure 1. Cohort Flow</a></li>
-  <li><a href="#table-1.-baseline-characteristics" id="toc-table-1.-baseline-characteristics" class="nav-link" data-scroll-target="#table-1.-baseline-characteristics">Table 1. Baseline Characteristics</a></li>
-  <li><a href="#table-2.-in-hospital-outcomes" id="toc-table-2.-in-hospital-outcomes" class="nav-link" data-scroll-target="#table-2.-in-hospital-outcomes">Table 2. In-Hospital Outcomes</a></li>
-  <li><a href="#figure-2.-adjusted-odds-ratios-for-in-hospital-outcomes" id="toc-figure-2.-adjusted-odds-ratios-for-in-hospital-outcomes" class="nav-link" data-scroll-target="#figure-2.-adjusted-odds-ratios-for-in-hospital-outcomes">Figure 2. Adjusted Odds Ratios for In-Hospital Outcomes</a></li>
+  <li><a href="#cohort-flow" id="toc-cohort-flow" class="nav-link" data-scroll-target="#cohort-flow">Cohort Flow</a></li>
+  <li><a href="#baseline-characteristics" id="toc-baseline-characteristics" class="nav-link" data-scroll-target="#baseline-characteristics">Baseline Characteristics</a></li>
+  <li><a href="#in-hospital-outcomes" id="toc-in-hospital-outcomes" class="nav-link" data-scroll-target="#in-hospital-outcomes">In-Hospital Outcomes</a></li>
+  <li><a href="#adjusted-odds-ratios-for-in-hospital-outcomes" id="toc-adjusted-odds-ratios-for-in-hospital-outcomes" class="nav-link" data-scroll-target="#adjusted-odds-ratios-for-in-hospital-outcomes">Adjusted Odds Ratios for In-Hospital Outcomes</a></li>
   <li><a href="#annual-trend" id="toc-annual-trend" class="nav-link" data-scroll-target="#annual-trend">Annual Trend</a></li>
   <li><a href="#sensitivity-analyses" id="toc-sensitivity-analyses" class="nav-link" data-scroll-target="#sensitivity-analyses">Sensitivity Analyses</a></li>
   <li><a href="#limitations" id="toc-limitations" class="nav-link" data-scroll-target="#limitations">Limitations</a></li>
@@ -154,10 +154,11 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><strong>Muhammad Saad</strong> · Dow University of Health Sciences · <a href="mailto:msaadasif.md@gmail.com">msaadasif.md@gmail.com</a> · <a href="https://orcid.org/0000-0002-1792-2357">ORCID 0000-0002-1792-2357</a></p>
 <style>
 table.table { width: 100%; table-layout: auto; }
 table.table th, table.table td { white-space: normal; overflow-wrap: anywhere; }
+.quarto-title-meta-author .quarto-title-author-email::after { content: " msaadasif.md@gmail.com"; }
+.quarto-title-meta-author .quarto-title-author-orcid::after { content: " ORCID 0000-0002-1792-2357"; }
 </style>
 <section id="key-findings" class="level2">
 <h2 class="anchored" data-anchor-id="key-findings">Key Findings</h2>
@@ -193,70 +194,36 @@ table.table th, table.table td { white-space: normal; overflow-wrap: anywhere; }
 <p>We compared hospitalizations with and without coded AWS using survey-weighted regression. Adjusted odds ratios summarize the association after accounting for the listed covariates; values above 1 indicate higher odds and values below 1 indicate lower odds. Results describe associations and do not establish cause and effect. HCUP-required small-cell suppression is shown as <strong>≤10</strong>; related percentages and values recoverable by subtraction are also masked.</p>
 </section>
 </section>
-<section id="figure-1.-cohort-flow" class="level2">
-<h2 class="anchored" data-anchor-id="figure-1.-cohort-flow">Figure 1. Cohort Flow</h2>
+<section id="cohort-flow" class="level2">
+<h2 class="anchored" data-anchor-id="cohort-flow">Cohort Flow</h2>
 <p>The steps below show how the analytic cohort was selected from NIS hospitalizations.</p>
-<div class="cell" data-tbl-cap="Figure 1. Cohort flow for adult TBI hospitalizations with alcohol use disorder, NIS 2017–2022.">
-<div id="fig-cohort-flow" class="cell-output-display quarto-float quarto-figure quarto-figure-center anchored">
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-cohort-flow" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-cohort-flow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="table table-striped table-hover table-sm caption-top small">
-<caption>Figure 1. Cohort flow for adult TBI hospitalizations with alcohol use disorder, NIS 2017–2022.</caption>
-<thead>
-<tr class="header">
-<th style="text-align: left;" data-quarto-table-cell-role="th">Step</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">Hospitalizations (unweighted)</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">Weighted estimate</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">All NIS hospitalizations (2017–2022)</td>
-<td style="text-align: right;">41065286</td>
-<td style="text-align: right;">205326348</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Adults aged ≥18 years</td>
-<td style="text-align: right;">34972964</td>
-<td style="text-align: right;">174864748</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Acute traumatic brain injury</td>
-<td style="text-align: right;">340749</td>
-<td style="text-align: right;">1703745</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Documented alcohol use disorder</td>
-<td style="text-align: right;">49941</td>
-<td style="text-align: right;">249705</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Known in-hospital mortality status (final cohort)</td>
-<td style="text-align: right;">49914</td>
-<td style="text-align: right;">249570</td>
-</tr>
-</tbody>
-</table>
+<img src="../output/public/cohort_flow.png" class="img-fluid figure-img" style="width:90.0%">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-cohort-flow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cohort-flow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Cohort flow for adult TBI hospitalizations with alcohol use disorder, NIS 2017–2022.
 </figcaption>
 </figure>
 </div>
 </div>
+</div>
 </section>
-<section id="table-1.-baseline-characteristics" class="level2">
-<h2 class="anchored" data-anchor-id="table-1.-baseline-characteristics">Table 1. Baseline Characteristics</h2>
+<section id="baseline-characteristics" class="level2">
+<h2 class="anchored" data-anchor-id="baseline-characteristics">Baseline Characteristics</h2>
 <p>Baseline characteristics are shown for the full cohort and by coded AWS status.</p>
 <div class="cell">
 <div id="tbl-baseline" class="cell quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl quarto-uncaptioned" id="tbl-baseline-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;1
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-baseline-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Baseline characteristics of adult TBI hospitalizations by AWS status.
 </figcaption>
 <div aria-describedby="tbl-baseline-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<table class="table table-striped table-hover table-sm caption-top small">
+<table class="table table-striped table-hover table-sm cell caption-top small">
 <thead>
 <tr class="header">
 <th style="text-align: left;" data-quarto-table-cell-role="th">Characteristic</th>
@@ -297,8 +264,8 @@ Table&nbsp;1
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Unknown</td>
-<td style="text-align: left;">Masked</td>
-<td style="text-align: left;">&lt;0.1%</td>
+<td style="text-align: left;">≤10</td>
+<td style="text-align: left;">≤10</td>
 <td style="text-align: left;">≤10</td>
 <td style="text-align: left;"></td>
 </tr>
@@ -461,7 +428,7 @@ Table&nbsp;1
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
+<td style="text-align: left;">&lt;0.001</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">2017–2019</td>
@@ -485,52 +452,38 @@ Table&nbsp;1
 <td style="text-align: left;"></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Unknown</td>
-<td style="text-align: left;">≤10</td>
-<td style="text-align: left;">≤10</td>
-<td style="text-align: left;">≤10</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
 <td style="text-align: left;">Hospital census region</td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
+<td style="text-align: left;">&lt;0.001</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">Northeast</td>
 <td style="text-align: left;">17%</td>
 <td style="text-align: left;">16%</td>
 <td style="text-align: left;">19%</td>
 <td style="text-align: left;"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">Midwest</td>
 <td style="text-align: left;">23%</td>
 <td style="text-align: left;">24%</td>
 <td style="text-align: left;">22%</td>
 <td style="text-align: left;"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">South</td>
 <td style="text-align: left;">33%</td>
 <td style="text-align: left;">33%</td>
 <td style="text-align: left;">30%</td>
 <td style="text-align: left;"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">West</td>
 <td style="text-align: left;">27%</td>
 <td style="text-align: left;">27%</td>
 <td style="text-align: left;">29%</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Unknown</td>
-<td style="text-align: left;">≤10</td>
-<td style="text-align: left;">≤10</td>
-<td style="text-align: left;">≤10</td>
 <td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
@@ -538,7 +491,7 @@ Table&nbsp;1
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
+<td style="text-align: left;">0.001</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Small</td>
@@ -562,45 +515,31 @@ Table&nbsp;1
 <td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Unknown</td>
-<td style="text-align: left;">≤10</td>
-<td style="text-align: left;">≤10</td>
-<td style="text-align: left;">≤10</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
 <td style="text-align: left;">Hospital location and teaching status</td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
+<td style="text-align: left;">&lt;0.001</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">Rural</td>
 <td style="text-align: left;">2.2%</td>
 <td style="text-align: left;">2.2%</td>
 <td style="text-align: left;">2.4%</td>
 <td style="text-align: left;"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">Urban, non-teaching</td>
 <td style="text-align: left;">9.8%</td>
 <td style="text-align: left;">9.4%</td>
 <td style="text-align: left;">11%</td>
 <td style="text-align: left;"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">Urban, teaching</td>
 <td style="text-align: left;">88%</td>
 <td style="text-align: left;">88%</td>
 <td style="text-align: left;">87%</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Unknown</td>
-<td style="text-align: left;">≤10</td>
-<td style="text-align: left;">≤10</td>
-<td style="text-align: left;">≤10</td>
 <td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
@@ -608,7 +547,7 @@ Table&nbsp;1
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
+<td style="text-align: left;">&lt;0.001</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Concussion, other or unspecified only</td>
@@ -646,102 +585,32 @@ Table&nbsp;1
 <td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Unknown</td>
-<td style="text-align: left;">≤10</td>
-<td style="text-align: left;">≤10</td>
-<td style="text-align: left;">≤10</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
 <td style="text-align: left;">Skull fracture</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">0</td>
-<td style="text-align: left;">80%</td>
-<td style="text-align: left;">78%</td>
-<td style="text-align: left;">84%</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">1</td>
 <td style="text-align: left;">20%</td>
 <td style="text-align: left;">22%</td>
 <td style="text-align: left;">16%</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Unknown</td>
-<td style="text-align: left;">≤10</td>
-<td style="text-align: left;">≤10</td>
-<td style="text-align: left;">≤10</td>
-<td style="text-align: left;"></td>
+<td style="text-align: left;">&lt;0.001</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Any injury code outside the head (initial encounter)</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">0</td>
-<td style="text-align: left;">55%</td>
-<td style="text-align: left;">52%</td>
-<td style="text-align: left;">62%</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">1</td>
 <td style="text-align: left;">45%</td>
 <td style="text-align: left;">48%</td>
 <td style="text-align: left;">38%</td>
-<td style="text-align: left;"></td>
+<td style="text-align: left;">&lt;0.001</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Unknown</td>
-<td style="text-align: left;">≤10</td>
-<td style="text-align: left;">≤10</td>
-<td style="text-align: left;">≤10</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
 <td style="text-align: left;">TBI as principal diagnosis</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">0</td>
-<td style="text-align: left;">32%</td>
-<td style="text-align: left;">32%</td>
-<td style="text-align: left;">33%</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">1</td>
 <td style="text-align: left;">68%</td>
 <td style="text-align: left;">68%</td>
 <td style="text-align: left;">67%</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Unknown</td>
-<td style="text-align: left;">≤10</td>
-<td style="text-align: left;">≤10</td>
-<td style="text-align: left;">≤10</td>
-<td style="text-align: left;"></td>
+<td style="text-align: left;">0.004</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Chronic comorbidity count (Elixhauser refined)</td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
+<td style="text-align: left;">&lt;0.001</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">0</td>
@@ -772,319 +641,81 @@ Table&nbsp;1
 <td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Unknown</td>
-<td style="text-align: left;">≤10</td>
-<td style="text-align: left;">≤10</td>
-<td style="text-align: left;">≤10</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
 <td style="text-align: left;">Hypertension</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">0</td>
-<td style="text-align: left;">56%</td>
-<td style="text-align: left;">59%</td>
-<td style="text-align: left;">46%</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">1</td>
 <td style="text-align: left;">44%</td>
 <td style="text-align: left;">41%</td>
 <td style="text-align: left;">54%</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Unknown</td>
-<td style="text-align: left;">≤10</td>
-<td style="text-align: left;">≤10</td>
-<td style="text-align: left;">≤10</td>
-<td style="text-align: left;"></td>
+<td style="text-align: left;">&lt;0.001</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Diabetes mellitus</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
+<td style="text-align: left;">11%</td>
+<td style="text-align: left;">11%</td>
+<td style="text-align: left;">11%</td>
+<td style="text-align: left;">0.5</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">0</td>
-<td style="text-align: left;">89%</td>
-<td style="text-align: left;">89%</td>
-<td style="text-align: left;">89%</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">1</td>
-<td style="text-align: left;">11%</td>
-<td style="text-align: left;">11%</td>
-<td style="text-align: left;">11%</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Unknown</td>
-<td style="text-align: left;">≤10</td>
-<td style="text-align: left;">≤10</td>
-<td style="text-align: left;">≤10</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
 <td style="text-align: left;">Chronic pulmonary disease</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">0</td>
-<td style="text-align: left;">88%</td>
-<td style="text-align: left;">88%</td>
-<td style="text-align: left;">86%</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">1</td>
 <td style="text-align: left;">12%</td>
 <td style="text-align: left;">12%</td>
 <td style="text-align: left;">14%</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Unknown</td>
-<td style="text-align: left;">≤10</td>
-<td style="text-align: left;">≤10</td>
-<td style="text-align: left;">≤10</td>
-<td style="text-align: left;"></td>
+<td style="text-align: left;">&lt;0.001</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Heart failure</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">0</td>
-<td style="text-align: left;">95%</td>
-<td style="text-align: left;">96%</td>
-<td style="text-align: left;">93%</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">1</td>
 <td style="text-align: left;">4.9%</td>
 <td style="text-align: left;">4.3%</td>
 <td style="text-align: left;">6.7%</td>
-<td style="text-align: left;"></td>
+<td style="text-align: left;">&lt;0.001</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Unknown</td>
-<td style="text-align: left;">≤10</td>
-<td style="text-align: left;">≤10</td>
-<td style="text-align: left;">≤10</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
 <td style="text-align: left;">Chronic kidney disease</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">0</td>
-<td style="text-align: left;">97%</td>
-<td style="text-align: left;">97%</td>
-<td style="text-align: left;">97%</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">1</td>
 <td style="text-align: left;">3.1%</td>
 <td style="text-align: left;">3.2%</td>
 <td style="text-align: left;">3.0%</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Unknown</td>
-<td style="text-align: left;">≤10</td>
-<td style="text-align: left;">≤10</td>
-<td style="text-align: left;">≤10</td>
-<td style="text-align: left;"></td>
+<td style="text-align: left;">0.4</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Depression</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">0</td>
-<td style="text-align: left;">87%</td>
-<td style="text-align: left;">88%</td>
-<td style="text-align: left;">82%</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">1</td>
 <td style="text-align: left;">13%</td>
 <td style="text-align: left;">12%</td>
 <td style="text-align: left;">18%</td>
-<td style="text-align: left;"></td>
+<td style="text-align: left;">&lt;0.001</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Unknown</td>
-<td style="text-align: left;">≤10</td>
-<td style="text-align: left;">≤10</td>
-<td style="text-align: left;">≤10</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
 <td style="text-align: left;">Obesity</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">0</td>
-<td style="text-align: left;">94%</td>
-<td style="text-align: left;">94%</td>
-<td style="text-align: left;">95%</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">1</td>
 <td style="text-align: left;">5.6%</td>
 <td style="text-align: left;">5.6%</td>
 <td style="text-align: left;">5.4%</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Unknown</td>
-<td style="text-align: left;">≤10</td>
-<td style="text-align: left;">≤10</td>
-<td style="text-align: left;">≤10</td>
-<td style="text-align: left;"></td>
+<td style="text-align: left;">0.5</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Any liver disease (K70–K77)</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">0</td>
-<td style="text-align: left;">86%</td>
-<td style="text-align: left;">90%</td>
-<td style="text-align: left;">74%</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">1</td>
 <td style="text-align: left;">14%</td>
 <td style="text-align: left;">10%</td>
 <td style="text-align: left;">26%</td>
-<td style="text-align: left;"></td>
+<td style="text-align: left;">&lt;0.001</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Unknown</td>
-<td style="text-align: left;">≤10</td>
-<td style="text-align: left;">≤10</td>
-<td style="text-align: left;">≤10</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
 <td style="text-align: left;">Alcoholic liver disease (K70)</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">0</td>
-<td style="text-align: left;">91%</td>
-<td style="text-align: left;">94%</td>
-<td style="text-align: left;">82%</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">1</td>
 <td style="text-align: left;">8.6%</td>
 <td style="text-align: left;">5.9%</td>
 <td style="text-align: left;">18%</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Unknown</td>
-<td style="text-align: left;">≤10</td>
-<td style="text-align: left;">≤10</td>
-<td style="text-align: left;">≤10</td>
-<td style="text-align: left;"></td>
+<td style="text-align: left;">&lt;0.001</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Other substance use disorder</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">0</td>
-<td style="text-align: left;">84%</td>
-<td style="text-align: left;">83%</td>
-<td style="text-align: left;">85%</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">1</td>
 <td style="text-align: left;">16%</td>
 <td style="text-align: left;">17%</td>
 <td style="text-align: left;">15%</td>
-<td style="text-align: left;"></td>
+<td style="text-align: left;">&lt;0.001</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Unknown</td>
-<td style="text-align: left;">≤10</td>
-<td style="text-align: left;">≤10</td>
-<td style="text-align: left;">≤10</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
 <td style="text-align: left;">Current or past tobacco/nicotine use</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">0</td>
-<td style="text-align: left;">55%</td>
-<td style="text-align: left;">56%</td>
-<td style="text-align: left;">53%</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">1</td>
 <td style="text-align: left;">45%</td>
 <td style="text-align: left;">44%</td>
 <td style="text-align: left;">47%</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Unknown</td>
-<td style="text-align: left;">≤10</td>
-<td style="text-align: left;">≤10</td>
-<td style="text-align: left;">≤10</td>
-<td style="text-align: left;"></td>
+<td style="text-align: left;">&lt;0.001</td>
 </tr>
 </tbody>
 </table>
@@ -1095,18 +726,18 @@ Table&nbsp;1
 </div>
 <p><em>Values are reported as provided in the suppressed public table. AWS = alcohol withdrawal syndrome. Cells with unweighted counts ≤10, and complementary cells or percentages that could reveal them, are suppressed.</em></p>
 </section>
-<section id="table-2.-in-hospital-outcomes" class="level2">
-<h2 class="anchored" data-anchor-id="table-2.-in-hospital-outcomes">Table 2. In-Hospital Outcomes</h2>
+<section id="in-hospital-outcomes" class="level2">
+<h2 class="anchored" data-anchor-id="in-hospital-outcomes">In-Hospital Outcomes</h2>
 <p>The table presents crude comparisons and adjusted associations for the prespecified outcomes. Continuous outcomes are shown as weighted means. The adjusted estimate compares the odds or mean outcome for hospitalizations with AWS versus those without AWS, after covariate adjustment.</p>
 <div class="cell">
 <div id="tbl-outcomes" class="cell quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl quarto-uncaptioned" id="tbl-outcomes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;2
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-outcomes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2: Crude and adjusted in-hospital outcomes by AWS status.
 </figcaption>
 <div aria-describedby="tbl-outcomes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<table class="table table-striped table-hover table-sm caption-top small">
+<table class="table table-striped table-hover table-sm cell caption-top small">
 <thead>
 <tr class="header">
 <th style="text-align: left;" data-quarto-table-cell-role="th">Outcome</th>
@@ -1121,8 +752,8 @@ Table&nbsp;2
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">In-hospital mortality</td>
-<td style="text-align: left;">94.7% (2,028)</td>
-<td style="text-align: left;">96.0% (466)</td>
+<td style="text-align: left;">5.3% (2,028)</td>
+<td style="text-align: left;">4.0% (466)</td>
 <td style="text-align: left;">0.74 (0.67–0.83)</td>
 <td style="text-align: left;">0.60 (0.53–0.67)</td>
 <td style="text-align: left;">-2.04% (-2.46% to -1.63%)</td>
@@ -1130,8 +761,8 @@ Table&nbsp;2
 </tr>
 <tr class="even">
 <td style="text-align: left;">Invasive mechanical ventilation</td>
-<td style="text-align: left;">77.9% (8,466)</td>
-<td style="text-align: left;">74.0% (3,030)</td>
+<td style="text-align: left;">22.1% (8,466)</td>
+<td style="text-align: left;">26.0% (3,030)</td>
 <td style="text-align: left;">1.24 (1.18–1.30)</td>
 <td style="text-align: left;">1.42 (1.34–1.50)</td>
 <td style="text-align: left;">+5.97% (+4.94% to +7.00%)</td>
@@ -1139,8 +770,8 @@ Table&nbsp;2
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Pneumonia or aspiration pneumonitis</td>
-<td style="text-align: left;">92.2% (3,000)</td>
-<td style="text-align: left;">82.0% (2,097)</td>
+<td style="text-align: left;">7.8% (3,000)</td>
+<td style="text-align: left;">18.0% (2,097)</td>
 <td style="text-align: left;">2.58 (2.43–2.74)</td>
 <td style="text-align: left;">2.32 (2.17–2.49)</td>
 <td style="text-align: left;">+8.49% (+7.70% to +9.29%)</td>
@@ -1148,8 +779,8 @@ Table&nbsp;2
 </tr>
 <tr class="even">
 <td style="text-align: left;">Institutional discharge (among survivors)</td>
-<td style="text-align: left;">74.3% (9,310)</td>
-<td style="text-align: left;">60.1% (4,462)</td>
+<td style="text-align: left;">25.7% (9,310)</td>
+<td style="text-align: left;">39.9% (4,462)</td>
 <td style="text-align: left;">1.92 (1.83–2.01)</td>
 <td style="text-align: left;">1.74 (1.65–1.84)</td>
 <td style="text-align: left;">+10.38% (+9.35% to +11.40%)</td>
@@ -1157,8 +788,8 @@ Table&nbsp;2
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Discharge against medical advice (among survivors)</td>
-<td style="text-align: left;">95.8% (1,505)</td>
-<td style="text-align: left;">94.4% (630)</td>
+<td style="text-align: left;">4.2% (1,505)</td>
+<td style="text-align: left;">5.6% (630)</td>
 <td style="text-align: left;">1.38 (1.25–1.52)</td>
 <td style="text-align: left;">1.49 (1.34–1.66)</td>
 <td style="text-align: left;">+1.75% (+1.23% to +2.27%)</td>
@@ -1191,8 +822,8 @@ Table&nbsp;2
 </div>
 <p><em>AWS = alcohol withdrawal syndrome; aOR = adjusted odds ratio; CI = confidence interval; LOS = length of stay; AMA = against medical advice. Cells with unweighted counts ≤10, and complementary cells or percentages that could reveal them, are suppressed.</em></p>
 </section>
-<section id="figure-2.-adjusted-odds-ratios-for-in-hospital-outcomes" class="level2">
-<h2 class="anchored" data-anchor-id="figure-2.-adjusted-odds-ratios-for-in-hospital-outcomes">Figure 2. Adjusted Odds Ratios for In-Hospital Outcomes</h2>
+<section id="adjusted-odds-ratios-for-in-hospital-outcomes" class="level2">
+<h2 class="anchored" data-anchor-id="adjusted-odds-ratios-for-in-hospital-outcomes">Adjusted Odds Ratios for In-Hospital Outcomes</h2>
 <p>The estimates summarize adjusted associations between coded AWS and five binary outcomes. The vertical reference line at 1 marks equal odds between groups; confidence intervals crossing 1 are compatible with no difference at the 95% confidence level.</p>
 <div class="cell">
 <div class="cell-output-display">
@@ -1202,7 +833,7 @@ Table&nbsp;2
 <img src="../output/public/forest_plot.png" class="img-fluid figure-img" style="width:100.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-forest-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: Figure 2. Adjusted odds ratios and 95% confidence intervals for in-hospital outcomes.
+Figure&nbsp;2: Adjusted odds ratios and 95% confidence intervals for in-hospital outcomes.
 </figcaption>
 </figure>
 </div>
@@ -1226,78 +857,24 @@ Figure&nbsp;3: Annual prevalence of coded AWS among eligible hospitalizations.
 </div>
 </div>
 </div>
+</section>
+<section id="sensitivity-analyses" class="level2">
+<h2 class="anchored" data-anchor-id="sensitivity-analyses">Sensitivity Analyses</h2>
+<p>We repeated the mortality analysis after restricting the cohort to hospitalizations with LOS ≥2 days, requiring TBI to be the principal diagnosis, and excluding hospitalizations transferred in. The inverse association with mortality was smaller in the LOS-restricted analysis (<strong>0.70 (0.62–0.80)</strong>), a pattern consistent with early death or short stays leaving less opportunity for AWS recognition and coding. This does not identify the mechanism behind the association.</p>
 <div class="cell">
-<div id="tbl-trend" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<div id="tbl-sensitivity" class="cell quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-trend-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;3: Annual prevalence of coded AWS, NIS 2017–2022.
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-sensitivity-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;3: Sensitivity analyses for in-hospital mortality.
 </figcaption>
-<div aria-describedby="tbl-trend-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div aria-describedby="tbl-sensitivity-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
 <table class="table table-striped table-hover table-sm cell caption-top small">
 <thead>
 <tr class="header">
-<th style="text-align: right;" data-quarto-table-cell-role="th">Year</th>
-<th style="text-align: left;" data-quarto-table-cell-role="th">AWS (%)</th>
-<th style="text-align: left;" data-quarto-table-cell-role="th">95% CI</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: right;">2017</td>
-<td style="text-align: left;">20.7%</td>
-<td style="text-align: left;">19.7%–21.7%</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">2018</td>
-<td style="text-align: left;">22.4%</td>
-<td style="text-align: left;">21.3%–23.5%</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">2019</td>
-<td style="text-align: left;">21.9%</td>
-<td style="text-align: left;">20.9%–22.9%</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">2020</td>
-<td style="text-align: left;">24.3%</td>
-<td style="text-align: left;">23.2%–25.3%</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">2021</td>
-<td style="text-align: left;">25.5%</td>
-<td style="text-align: left;">24.4%–26.6%</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">2022</td>
-<td style="text-align: left;">25.4%</td>
-<td style="text-align: left;">24.3%–26.5%</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</figure>
-</div>
-</div>
-</section>
-<section id="sensitivity-analyses" class="level2">
-<h2 class="anchored" data-anchor-id="sensitivity-analyses">Sensitivity Analyses</h2>
-<p>We repeated the mortality analysis after restricting the cohort to hospitalizations with LOS ≥2 days, requiring TBI to be the principal diagnosis, and excluding hospitalizations transferred in. The inverse association with mortality was smaller in the LOS-restricted analysis (<strong>0.71 (0.62–0.80)</strong>), a pattern consistent with early death or short stays leaving less opportunity for AWS recognition and coding. This does not identify the mechanism behind the association.</p>
-<div class="cell">
-<div id="tbl-sensitivity" class="cell quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl quarto-uncaptioned" id="tbl-sensitivity-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;4
-</figcaption>
-<div aria-describedby="tbl-sensitivity-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="cell-output-display">
-<table class="table table-striped table-hover table-sm caption-top small">
-<thead>
-<tr class="header">
 <th style="text-align: left;" data-quarto-table-cell-role="th">Analysis</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">Hospitalizations (n)</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">Deaths (n)</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Hospitalizations (n)</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Deaths (n)</th>
 <th style="text-align: left;" data-quarto-table-cell-role="th">Adjusted OR (95% CI)</th>
 <th style="text-align: left;" data-quarto-table-cell-role="th">p-value</th>
 </tr>
@@ -1305,29 +882,29 @@ Table&nbsp;4
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">Primary analysis (full cohort)</td>
-<td style="text-align: right;">45949</td>
-<td style="text-align: right;">2217</td>
+<td style="text-align: left;">45,949</td>
+<td style="text-align: left;">2,217</td>
 <td style="text-align: left;">0.60 (0.53–0.67)</td>
 <td style="text-align: left;">&lt;0.001</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">LOS ≥2 days</td>
-<td style="text-align: right;">37494</td>
-<td style="text-align: right;">1657</td>
-<td style="text-align: left;">0.71 (0.62–0.80)</td>
+<td style="text-align: left;">37,494</td>
+<td style="text-align: left;">1,657</td>
+<td style="text-align: left;">0.70 (0.62–0.80)</td>
 <td style="text-align: left;">&lt;0.001</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">TBI as principal diagnosis</td>
-<td style="text-align: right;">31234</td>
-<td style="text-align: right;">1798</td>
+<td style="text-align: left;">31,234</td>
+<td style="text-align: left;">1,798</td>
 <td style="text-align: left;">0.58 (0.51–0.66)</td>
 <td style="text-align: left;">&lt;0.001</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Exclude transferred-in</td>
-<td style="text-align: right;">38511</td>
-<td style="text-align: right;">1732</td>
+<td style="text-align: left;">38,511</td>
+<td style="text-align: left;">1,732</td>
 <td style="text-align: left;">0.59 (0.52–0.68)</td>
 <td style="text-align: left;">&lt;0.001</td>
 </tr>
@@ -1350,14 +927,8 @@ Table&nbsp;4
 </section>
 <section id="appendix.-icd-10-cm-code-list" class="level2">
 <h2 class="anchored" data-anchor-id="appendix.-icd-10-cm-code-list">Appendix. ICD-10-CM Code List</h2>
-<p>The diagnosis code groups used to identify the cohort and study conditions are listed below.</p>
+<p><strong>Table A1. ICD-10-CM code groups used to identify the cohort and study conditions.</strong></p>
 <div class="cell">
-<div id="tbl-codes" class="cell quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl quarto-uncaptioned" id="tbl-codes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;5
-</figcaption>
-<div aria-describedby="tbl-codes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
 <table class="table table-striped table-hover table-sm caption-top small">
 <thead>
@@ -1430,9 +1001,6 @@ Table&nbsp;5
 </tr>
 </tbody>
 </table>
-</div>
-</div>
-</figure>
 </div>
 </div>
 
